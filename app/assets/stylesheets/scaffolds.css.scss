@@ -1,0 +1,59 @@
+div {
+  &.field, &.actions {
+    margin-bottom: 10px;
+    label {
+      width: 100px;
+      float: left;
+      text-align: right;
+      margin-right: 20px;
+      display: block
+    }
+    select{
+      width: 173px;
+    }
+  }
+}
+
+#notice {
+  color: green;
+}
+
+#alert {
+  color: red;
+}
+
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+.danger {
+  color: #ff0000;
+}
+
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px 7px 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+  h2 {
+    text-align: left;
+    font-weight: bold;
+    padding: 5px 5px 5px 15px;
+    font-size: 12px;
+    margin: -7px;
+    margin-bottom: 0px;
+    background-color: #c00;
+    color: #fff;
+  }
+  ul li {
+    font-size: 12px;
+    list-style: square;
+  }
+}
+
+.tableHeader {
+  cursor: pointer;
+}

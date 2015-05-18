@@ -1,0 +1,25 @@
+%h1 Listing users
+
+%table
+  %thead
+    %tr
+      - User.column_names.each do |attr_name, _|
+        %th
+          = attr_name
+      %th
+      %th
+      %th
+
+  %tbody
+    - @users.sort_by(&:id).each do |user|
+      %tr
+        - user.attributes.each do |_, attr_value|
+          %th
+            = attr_value
+        %td= link_to 'Show', user
+        %td= link_to 'Edit', edit_user_path(user)
+        %td= link_to 'Destroy', user, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New User', new_user_path

@@ -1,0 +1,10 @@
+#header
+  =link_to(root_path, class:"menuButton") do
+    .headerText D&D Tools
+  .headerUserActions
+    - if current_user
+      = link_to current_user.email, user_path(current_user)
+      = link_to "Logout", :logout, method: :post
+    - else
+      = link_to "Sign up", new_user_path
+      = link_to "Login", :login

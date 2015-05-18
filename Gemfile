@@ -44,4 +44,4 @@ gem 'haml-rails'
 
 gem 'sorcery'
 
-gem 'coffee-script-source'
+gem 'coffee-script-source', '1.8.0'
