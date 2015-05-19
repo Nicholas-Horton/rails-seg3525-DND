@@ -2,46 +2,57 @@ $header-height: 50px;
 $footer-height: 100px;
 
 body{
-  padding-top: $header-height;
   font-family: Helvetica, Arial, sans-serif;
-  background-color: #EEE;
+  background-color: #DDD;
 }
 /* -- HEADER -- */
 #header{
   position: absolute;
   top:0;
   left:0;
-  background-color: #DDD;
+  background-color: #CCC;
   border-bottom: 2px solid #BBB;
   width: 100%;
   display: inline-block;
 
-  .headerText{
-    float: left;
-    padding-left: 20px;
-    font-weight: bold;
-    font-size: $header-height - 10px;
-    color: #444;
+  .header-content {
+    width: 80%;
+    margin: auto;
 
-    &:hover {
-      color: #111;
+    .headerText{
+      float: left;
+      padding-left: 20px;
+      font-weight: bold;
+      font-size: $header-height - 10px;
+      color: #444;
+
+      &:hover {
+        color: #111;
+      }
+    }
+
+    .headerUserActions {
+      float: right;
+      position: relative;
+      top: 50%;
+      transform: translateY(50%);
+      padding-right: 20px;
     }
   }
+}
 
-  .headerUserActions {
-    float: right;
-    position: relative;
-    top: 50%;
-    transform: translateY(50%);
-    padding-right: 20px;
-  }
-
-}/* -- Notice -- */
+/* -- NOTICE -- */
 #notices  {
 }
 
 /* -- CONTENT -- */
 #content{
+  width: 80%;
+  min-height: 400px;
+  margin: auto;
+  padding-top: $header-height;
+  background-color: #EEE;
+  border: 2px solid #CCC;
 }
 
 a, a:visited {
