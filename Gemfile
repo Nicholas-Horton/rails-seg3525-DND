@@ -45,3 +45,5 @@ gem 'haml-rails'
 gem 'sorcery'
 
 gem 'coffee-script-source', '1.8.0'
+
+gem 'jquery-ui-rails'

@@ -1,0 +1,36 @@
+#login-form {
+  z-index: 90;
+  display: none;
+  position: absolute;
+  right: -5%;
+  top: 54px;
+  background-color: #DDD;
+  border: 2px solid #BBB;
+  border-radius: 4px;
+  padding: 10px 10px 0 10px;
+
+  #login-alert {
+    padding-bottom: 10px;
+    &:empty {
+      padding: 0;
+    }
+  }
+
+  #email, #password {
+    padding: 10px;
+    border: 1px solid #BBB;
+    transition: box-shadow 0.3s, border 0.3s;
+
+    &:focus {
+      border: 1px solid #EEE;
+      box-shadow: 0 0 5px 1px #EEE;
+    }
+  }
+
+  input[type='submit'] {
+    display: block;
+    margin: auto;
+    border: 1px solid #BBB;
+    padding: 5px;
+  }
+}
