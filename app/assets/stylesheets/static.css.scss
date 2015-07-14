@@ -2,48 +2,71 @@ $header-height: 50px;
 $footer-height: 100px;
 
 body{
-  padding-top: $header-height;
   font-family: Helvetica, Arial, sans-serif;
-  background-color: #EEE;
+  background-color: #DDD;
 }
 /* -- HEADER -- */
 #header{
   position: absolute;
   top:0;
   left:0;
-  background-color: #DDD;
+  background-color: #CCC;
   border-bottom: 2px solid #BBB;
   width: 100%;
   display: inline-block;
+  //TODO: alert in mini-form
+  .header-content {
+    z-index: 100;
+    position: relative;
+    width: 80%;
+    max-width: 1200px;
+    margin: auto;
 
-  .headerText{
-    float: left;
-    padding-left: 20px;
-    font-weight: bold;
-    font-size: $header-height - 10px;
-    color: #444;
+    .headerText{
+      float: left;
+      padding-left: 20px;
+      font-weight: bold;
+      font-size: $header-height - 10px;
+    }
 
-    &:hover {
-      color: #111;
+    .headerUserActions {
+      float: right;
+      padding-right: 20px;
+      margin: 8px 0;
+    }
+
+    #login, #logout, #sign-up {
+      z-index: 110;
+      display: inline-block;
+      padding: 4px 8px;
+      border: 1px solid #BBB;
+      border-radius: 8px;
+      background-color: #DDD;
+      text-decoration: none;
+
+      &:hover {
+        background-color: #EEE;
+      }
     }
   }
+}
 
-  .headerUserActions {
-    float: right;
-    position: relative;
-    top: 50%;
-    transform: translateY(50%);
-    padding-right: 20px;
-  }
-
-}/* -- Notice -- */
+/* -- Notice -- */
 #notices  {
+  width: 80%;
+  margin: 50px auto auto;
 }
 
 /* -- CONTENT -- */
 #content{
+  width: 80%;
   max-width: 1200px;
-  margin:0 auto;
+  min-height: 400px;
+  margin: auto;
+  background-color: #EEE;
+  border-left: 2px solid #CCC;
+  border-right: 2px solid #CCC;
+  padding: 0px 20px;
 }
 
 a, a:visited {

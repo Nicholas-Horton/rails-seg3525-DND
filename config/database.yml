@@ -6,12 +6,16 @@ default: &default
 development:
   <<: *default
   database: DNDTools_development
+  host: localhost
   username: dndtools
   password: dndtools
 
 test:
   <<: *default
   database: DNDTools_test
+  host: localhost
+  username: dndtools
+  password: dndtools
 
 production:
   <<: *default
