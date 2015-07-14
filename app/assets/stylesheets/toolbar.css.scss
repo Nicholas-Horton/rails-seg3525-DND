@@ -1,0 +1,21 @@
+#toolbar {
+  position: absolute;
+  display: inline-block;
+  bottom: 0;
+  right: 0;
+  font-size: 28px;
+  margin-right: 20px;
+  background-color: #BBBBBB;
+  a {
+    padding: 10px 20px;
+    display: inline-block;
+    text-decoration: none;
+    &:hover {
+      background-color: #999999;
+    }
+    &.activated {
+      background-color: #999999;
+    }
+  }
+}
+
