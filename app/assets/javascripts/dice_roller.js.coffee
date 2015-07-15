@@ -33,6 +33,7 @@ submitDiceRoll = (formula) ->
   if validFormula formula
     formulaResult = evaluateFormula formula
     formula = formula.replace(/\+/g, ' + ')
+    formula = formula.replace(/-/g, ' - ')
     result = ""
     if $('#dice-roller-output').val() != ''
       result += "----------------------------------\n"
@@ -41,23 +42,26 @@ submitDiceRoll = (formula) ->
     $('#dice-roller-output').scrollTop($('#dice-roller-output')[0].scrollHeight)
 
 validFormula = (formula) ->
-  regex = /^((\d*d\d+)|(\d+))(\+((\d*d\d+)|(\d+)))*$/
+  regex = /^((\d*d\d+)|(\d+))((\+|-)((\d*d\d+)|(\d+)))*$/
   regex.test formula
 
 evaluateFormula = (formula) ->
-#  TODO: implement - and *
-  result = formula.split('+')
+  result = formula.split(/\+|-/)
+  operations = (s for s in formula when s == '+' || s == '-')
   result = result.map evaluateDie
-  sum = 0
-  sum += n for n in result
-  sum
+  exp = ""
+  for i in [0..result.length-1]
+    exp += result[i]
+    if i != result.length - 1
+      exp += operations[i]
+  eval(exp)
 
 evaluateDie = (die) ->
   if die.indexOf('d') == -1
     return parseInt(die)
   data = die.split('d')
   n = 1
-  if data.length == 2
+  if data[0] != ''
     n = data[0]
   d = data[data.length - 1]
   sum = 0
