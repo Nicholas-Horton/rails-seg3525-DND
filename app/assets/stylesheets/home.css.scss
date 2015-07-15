@@ -9,6 +9,13 @@
     border-spacing: 0px;
     border: 2px solid #BBBBBB;
 
+    tr:hover{
+      td{
+        background-color: #CCCCCC;
+        cursor: pointer;
+      }
+    }
+
     tr:nth-child(even) {
       background-color: #DDDDDD;
     }
