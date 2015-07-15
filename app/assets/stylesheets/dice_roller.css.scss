@@ -46,6 +46,11 @@
     }
   }
 
+  #error-message {
+    color: red;
+    padding: 5px;
+  }
+
   #dice-roller-output {
     resize: none;
     width: 294px;
@@ -57,6 +62,21 @@
     width: 294px;
     font-size: 24px;
 
+  }
+
+  input {
+    border: 1px solid #BBB;
+    transition: box-shadow 0.3s, border 0.3s;
+
+    &:focus {
+      border: 1px solid #EEE;
+      box-shadow: 0 0 5px 1px #EEE;
+    }
+
+    &.invalid {
+      border: 1px solid #E00;
+      box-shadow: 0 0 5px 1px #E00;
+    }
   }
 
 

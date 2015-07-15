@@ -5,6 +5,10 @@ $(document).ready ->
     clearDice()
   $('#dice-roller-input').bind 'keyup', (e) ->
     rollInputChanged(e)
+  $('#dice-roller input').bind 'keyup', (e) ->
+    $(this).removeClass('invalid')
+    $('#error-message').html('')
+
 
 
 rollDice = () ->
@@ -12,13 +16,22 @@ rollDice = () ->
   for d in [4, 6, 8, 10, 12, 20]
     amount = $('#d'+d+'-amount').val()
     if amount > 0
-      if formula != ''
-        formula += '+'
-      formula += amount + 'd' + d
       modifier = $('#d'+d+'-modifier').val()
-      if modifier != ''
+      if validModifier(modifier)
+        if formula != ''
+          formula += '+'
+        formula += amount + 'd' + d
         formula += modifier
+        $('#d'+d+'-modifier').removeClass('invalid')
+      else
+        $('#error-message').html('Invalid input')
+        $('#d'+d+'-modifier').addClass('invalid')
+        return
   submitDiceRoll(formula)
+
+validModifier = (modifier) ->
+  modifier = modifier.replace(/\s/g, '')
+  /^((\+|-)\d+)*$/.test(modifier)
 
 clearDice = () ->
   $("[id$='-amount']").val('')
