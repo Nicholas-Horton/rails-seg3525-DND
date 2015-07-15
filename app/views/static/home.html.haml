@@ -1,50 +1,48 @@
 .campaigns.twoColumns
   %h2 My Campaigns
-  #summaryTable
-    %table
-      %tr
-        %th Name
-        %th # of Encounters
-        %th Last Modified
-      %tr.clickableRow{:"data-href" => "/campaign_summary.html"}
-        %td Campaign 1
-        %td 3
-        %td 2015-07-03
-      %tr.clickableRow{:"data-href" => "/campaign_summary.html"}
-        %td test
-        %td 35
-        %td 2014-09-03
-      %tr.clickableRow{:"data-href" => "/campaign_summary.html"}
-        %td new camp
-        %td 0
-        %td 2012-01-08
+  #summaryTable.table
+    .tr
+      .th Name
+      .th # of Encounters
+      .th Last Modified
+    %a.tr{href: '/campaign_summary'}
+      .td Campaign 1
+      .td 3
+      .td 2015-07-03
+    %a.tr{href: '/campaign_summary'}
+      .td test
+      .td 35
+      .td 2014-09-03
+    %a.tr{href: '/campaign_summary'}
+      .td new camp
+      .td 0
+      .td 2012-01-08
 
   -#TODO replace with real link
-  = link_to 'Create new campaign...', "http://www.google.com/search/ass"
+  = link_to 'Create new campaign...', 'http://www.google.com/search/ass'
 
 .characters.twoColumns
   %h2 My Player Characters
-  #summaryTable
-    %table
-      %tr
-        %th Name
-        %th Class
-        %th Level
-        %th Campaign
-        %th Last Modified
-      %tr.clickableRow{:"data-href" => "/player_character.html"}
-        %td Tom
-        %td Fighter
-        %td 2
-        %td Campaign 1
-        %td 2015-07-03
-      %tr.clickableRow{:"data-href" => "/player_character.html"}
-        %td John
-        %td Wizard
-        %td 16
-        %td test
-        %td 2014-09-03
+  #summaryTable.table
+    .tr
+      .th Name
+      .th Class
+      .th Level
+      .th Campaign
+      .th Last Modified
+    %a.tr{href: '/player_character'}
+      .td Tom
+      .td Fighter
+      .td 2
+      .td Campaign 1
+      .td 2015-07-03
+    %a.tr{href: '/player_character'}
+      .td John
+      .td Wizard
+      .td 16
+      .td test
+      .td 2014-09-03
 
 
   -#TODO replace with real link
-  = link_to 'Create new player character...', "http://www.google.com/search/ass"
+  = link_to 'Create new player character...', 'http://www.google.com/search/ass'

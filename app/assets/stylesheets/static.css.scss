@@ -76,3 +76,19 @@ a, a:visited {
     color: #111;
   }
 }
+
+.table {
+  display: table;
+
+  .tr {
+    display: table-row;
+  }
+  .th {
+    display: table-cell;
+    font-weight: bold;
+  }
+  .td {
+    display: table-cell;
+  }
+
+}
