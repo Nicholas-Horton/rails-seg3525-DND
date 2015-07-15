@@ -46,13 +46,14 @@
     }
   }
 
-  #dice-roller-results {
+  #dice-roller-output {
     resize: none;
     width: 294px;
     height: 160px;
+    overflow-y: scroll;
   }
 
-  #dice-roller-expert-input {
+  #dice-roller-input {
     width: 294px;
     font-size: 24px;
 

@@ -14,8 +14,8 @@
         %td
           = text_field_tag "d#{d}-modifier"
 
-  %a{href: '#'} Roll
-  %a{href: '#'} Clear
+  %a#roll-dice{href: '#'} Roll
+  %a#clear-dice{href: '#'} Clear
 
-  = text_area_tag 'dice-roller-results'
-  = text_field_tag 'dice-roller-expert-input'
+  = text_area_tag 'dice-roller-output', nil, readonly: true
+  = text_field_tag 'dice-roller-input'
