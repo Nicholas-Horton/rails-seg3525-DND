@@ -3,4 +3,43 @@
   width: 49%;
   vertical-align: top;
 }
+#summaryTable{
+  table {
+    border-collapse: separate;
+    border-spacing: 0px;
+    border: 2px solid #BBBBBB;
 
+    tr:nth-child(even) {
+      background-color: #DDDDDD;
+    }
+
+    tr:nth-child(odd) {
+      background-color: #EEEEEE;
+    }
+
+    td, th {
+      text-align: center;
+      vertical-align: middle;
+      padding-left:    15px;
+      padding-right:   15px;
+      padding-top:     10px;
+      padding-bottom:  10px;
+    }
+
+    th {
+      background-color: #BBBBBB;
+      font-weight: bold;
+    }
+
+    td{
+      border-right:  2px solid #BBBBBB;
+    }
+  }
+  table tr td:first-child{
+    text-align: left;
+  }
+
+  table tr td:last-child{
+    border-right: none;
+  }
+}
