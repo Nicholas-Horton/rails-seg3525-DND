@@ -23,8 +23,11 @@ submitDiceRoll = () ->
   if validFormula formula
     formulaResult = evaluateFormula formula
     formula = formula.replace(/\+/g, ' + ')
-    result = formula + "\n" + "  = " + formulaResult + "\n" + "----------------------------------"
-    $('#dice-roller-output').append result + '\n'
+    result = ""
+    if $('#dice-roller-output').val() != ''
+      result += "----------------------------------\n"
+    result += formula + "\n" + "  = " + formulaResult + "\n"
+    $('#dice-roller-output').append result
     $('#dice-roller-output').scrollTop($('#dice-roller-output')[0].scrollHeight)
 
 validFormula = (formula) ->
