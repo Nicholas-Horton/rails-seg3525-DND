@@ -1,0 +1,50 @@
+
+#tabs {
+  float: none;
+  list-style: none;
+  position: relative;
+  text-align: left;
+  li {
+    float: left;
+    display: block;
+  }
+  input[type="radio"]{
+    position: absolute;
+    display: none;
+  }
+  .tab-label {
+    display: block;
+    padding: 14px 21px;
+    border-radius: 2px 2px 0 0;
+    font-size: 20px;
+    font-weight: normal;
+    cursor: pointer;
+    position: relative;
+    top: 4px;
+    transition: all 0.2s ease-in-out;
+    &:hover {
+      background: darken(#EEEEEE, 10);
+    }
+  }
+  .tab-content {
+    z-index: 2;
+    display: none;
+    overflow: hidden;
+    width: calc(100% - 50px);
+    font-size: 17px;
+    line-height: 25px;
+    padding: 0 25px 10px 25px;
+    position: absolute;
+    top: 53px;
+    left: 0;
+    background: darken(#EEEEEE, 15);
+  }
+  [id^="tab"]:checked + label {
+    top: 0;
+    padding-top: 17px;
+    background: darken(#EEEEEE, 15);
+  }
+  [id^="tab"]:checked ~ [id^="tab-content"] {
+    display: inline-block;
+  }
+}

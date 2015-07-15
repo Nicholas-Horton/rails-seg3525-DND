@@ -1,0 +1,17 @@
+%ul#tabs
+  %li
+    %input{type:'radio', name:'tabs', id:'tab1', checked:true}
+      %label.tab-label{for:'tab1'}
+        Main Sheet
+    %div{id:"tab-content1", class:"tab-content"}
+      %p
+        = render 'static/main_sheet_tab'
+  %li
+    %input{type:'radio', name:'tabs', id:'tab2', checked:false}
+      %label.tab-label{for:'tab2'}
+        Other Info
+    %div{id:"tab-content2", class:"tab-content"}
+      %p
+        = render 'static/other_info_tab'
+
+%br{style:'clear: both;'}

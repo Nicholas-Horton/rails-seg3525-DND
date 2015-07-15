@@ -1,0 +1,92 @@
+#attributes{
+  font-size: smaller;
+  legend {
+    font-size: medium;
+    font-weight: bold;
+  }
+
+  .attribute-wrapper {
+    display: table;
+    table-layout: fixed;
+    width:100%;
+    height:100%;
+  }
+
+  .attribute{
+    display: table-cell;
+    vertical-align: top;
+    vertical-align: top;
+    height: 200px;
+    border: 1px solid #111111;
+    .text-entry{
+      width: 100px;
+    }
+
+    .ability_score {
+      width: 30px;
+    }
+
+    .modifier {
+      width: 25px;
+      border: 2px solid #99CCFF;
+      border-radius: 5px;
+      float: right;
+    }
+  }
+}
+
+
+
+#attack-spell-wrapper{
+  font-size: smaller;
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: auto;
+  .attacks {
+    display: table-cell;
+    float: left;
+    width:25%;
+    height: 100%;
+    legend {
+      font-size: medium;
+      font-weight: bold;
+    }
+    @media only screen and (max-width: 980px) {
+      float: none;
+      width: 97%;
+    }
+  }
+
+  .spells{
+    display: table-cell;
+    float: left;
+    width:65%;
+    height:100%;
+    legend {
+      font-size: medium;
+      font-weight: bold;
+    }
+    @media only screen and (max-width: 980px) {
+      float: none;
+      width: 97%;
+    }
+  }
+}
+
+
+.feats{
+  font-size: smaller;
+  legend {
+    font-size: medium;
+    font-weight: bold;
+  }
+}
+
+
+
+
+
+
+
