@@ -1,3 +1,21 @@
 -#TODO finish dice roller
 #dice-roller
-  %h2 Rolls dice here
+  %table
+    %tr
+      %th Amount
+      %th Die
+      %th Modifier
+    - for d in [4,6,8,10,12,20]
+      %tr
+        %td
+          = number_field_tag "d#{d}-amount", nil, min: 0, max: 99, class: 'amount'
+        %td
+          = "d#{d}"
+        %td
+          = text_field_tag "d#{d}-modifier"
+
+  %a{href: '#'} Roll
+  %a{href: '#'} Clear
+
+  = text_area_tag 'dice-roller-results'
+  = text_field_tag 'dice-roller-expert-input'

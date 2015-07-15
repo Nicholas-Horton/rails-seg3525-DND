@@ -1,5 +1,6 @@
 #dice-roller {
   position: absolute;
+  z-index: 90;
   background-color: #999999;
   width: 300px;
   height: 450px;
@@ -7,6 +8,55 @@
   bottom: 52px;
   right: 0;
   margin-right: 20px;
+  padding: 10px;
+
+  table {
+    text-align: left;
+    td:nth-child(1),
+    th:nth-child(1) {
+      width: 60px;
+      padding-right: 20px;
+      input {
+        width: 60px;
+      }
+    }
+    td:nth-child(2),
+    th:nth-child(2) {
+      width: 30px;
+      padding-right: 20px;
+    }
+    td:nth-child(3),
+    th:nth-child(3) {
+      width: 150px;
+      input {
+        width: 150px;
+      }
+    }
+
+  }
+  
+  a {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px 0;
+    background: #bbb;
+
+    &:hover {
+      background: #aaa;
+    }
+  }
+
+  #dice-roller-results {
+    resize: none;
+    width: 294px;
+    height: 160px;
+  }
+
+  #dice-roller-expert-input {
+    width: 294px;
+    font-size: 24px;
+
+  }
 
 
 }
