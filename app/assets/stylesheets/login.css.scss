@@ -32,5 +32,11 @@
     margin: auto;
     border: 1px solid #BBB;
     padding: 5px;
+    cursor: pointer;
+    background-color: #EEE;
+
+    &:hover {
+      background-color: #DDD;
+    }
   }
 }
