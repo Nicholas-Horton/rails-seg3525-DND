@@ -8,7 +8,17 @@ $(document).ready ->
 
 
 rollDice = () ->
-  alert "TODO"
+  formula = ""
+  for d in [4, 6, 8, 10, 12, 20]
+    amount = $('#d'+d+'-amount').val()
+    if amount > 0
+      if formula != ''
+        formula += '+'
+      formula += amount + 'd' + d
+      modifier = $('#d'+d+'-modifier').val()
+      if modifier != ''
+        formula += modifier
+  submitDiceRoll(formula)
 
 clearDice = () ->
   $("[id$='-amount']").val('')
@@ -16,10 +26,10 @@ clearDice = () ->
 
 rollInputChanged = (e) ->
   if e.keyCode == 13
-    submitDiceRoll()
+    formula = $('#dice-roller-input').val().replace(/\s/g, '')
+    submitDiceRoll(formula)
 
-submitDiceRoll = () ->
-  formula = $('#dice-roller-input').val().replace(/\s/g, '')
+submitDiceRoll = (formula) ->
   if validFormula formula
     formulaResult = evaluateFormula formula
     formula = formula.replace(/\+/g, ' + ')
@@ -35,6 +45,7 @@ validFormula = (formula) ->
   regex.test formula
 
 evaluateFormula = (formula) ->
+#  TODO: implement - and *
   result = formula.split('+')
   result = result.map evaluateDie
   sum = 0
