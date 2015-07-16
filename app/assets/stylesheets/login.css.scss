@@ -30,13 +30,18 @@
   input[type='submit'] {
     display: block;
     margin: auto;
-    border: 1px solid #BBB;
+    border: 1px solid #AAA;
     padding: 5px;
     cursor: pointer;
     background-color: #EEE;
+    border-radius: 4px;
 
     &:hover {
-      background-color: #DDD;
+      background-color: #CCC;
+    }
+
+    &:active {
+      background-color: #AAA;
     }
   }
 }
