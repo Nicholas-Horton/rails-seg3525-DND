@@ -5,10 +5,11 @@
   width: 300px;
   height: 450px;
   display: none;
-  bottom: 52px;
+  bottom: 55px;
   right: 0;
   margin-right: 20px;
   padding: 10px;
+  border-radius: 10px 10px 0 0;
 
   table {
     text-align: left;
@@ -40,9 +41,14 @@
     padding: 10px 20px;
     margin: 10px 0;
     background: #bbb;
+    border-radius: 4px;
 
     &:hover {
       background: #aaa;
+    }
+
+    &:active {
+      background: #a5a5a5;
     }
   }
 
