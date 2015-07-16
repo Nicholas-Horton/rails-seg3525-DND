@@ -41,14 +41,16 @@
     padding: 10px 20px;
     margin: 10px 0;
     background: #bbb;
+    border: 1px solid #777;
     border-radius: 4px;
+    text-decoration: none;
 
     &:hover {
       background: #aaa;
     }
 
     &:active {
-      background: #a5a5a5;
+      background: #a6a6a6;
     }
   }
 
@@ -90,6 +92,7 @@
   input {
     border: 1px solid #BBB;
     transition: box-shadow 0.3s, border 0.3s;
+    outline: none;
 
     &:focus {
       border: 1px solid #EEE;
