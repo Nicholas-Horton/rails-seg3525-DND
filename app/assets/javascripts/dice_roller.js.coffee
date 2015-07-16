@@ -48,9 +48,11 @@ submitDiceRoll = (formula) ->
     formula = formula.replace(/\+/g, ' + ')
     formula = formula.replace(/-/g, ' - ')
     result = ""
-    if $('#dice-roller-output').val() != ''
-      result += "----------------------------------\n"
-    result += formula + "\n" + "  = " + formulaResult + "\n"
+    if $('#dice-roller-output').html() != ''
+      result += '<div class="dice-roller-separator"></div>'
+    result += '<div class="dice-roller-formula">'
+    result += formula + "<br>" + "&nbsp;&nbsp;  = " + formulaResult
+    result += '</div>'
     $('#dice-roller-output').append result
     $('#dice-roller-output').scrollTop($('#dice-roller-output')[0].scrollHeight)
 
