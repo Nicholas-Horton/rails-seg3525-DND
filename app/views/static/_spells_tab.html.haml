@@ -1,4 +1,8 @@
 #spells-tab
+
+  %label{for:'name-search'} Name:
+  %i.fa.fa-search.search-icon
+  %input.spells_search_input{type:'search', id:'name-search'}
   %table
     %tr
       %th Class
@@ -12,21 +16,69 @@
       %th &nbsp
     %tr
       %td
-        %select
+        %select#spell-class.spells_search_input
+          %option{value:''}
+          %option{value:'bard'} Bard
+          %option{value:'cleric'} Cleric
+          %option{value:'druid'} Druid
+          %option{value:'paladin'} Paladin
+          %option{value:'ranger'} Ranger
+          %option{value:'sorcerer'} Sorcerer
+          %option{value:'warlock'} Warlock
+          %option{value:'wizard'} Wizard
       %td
-        %select
+        %select#level.spells_search_input
+          %option{value:''}
+          %option{value:'0'} Cantrip
+          %option{value:'1'} 1st
+          %option{value:'2'} 2nd
+          %option{value:'3'} 3rd
+          %option{value:'4'} 4th
+          %option{value:'5'} 5th
+          %option{value:'6'} 6th
+          %option{value:'7'} 7th
+          %option{value:'8'} 8th
+          %option{value:'9'} 9th
       %td
-        %select
+        %select#school.spells_search_input
+          %option{value:''}
+          %option{value:'abjuration'} Abjuration
+          %option{value:'conjuration'} Conjuration
+          %option{value:'divination'} Divination
+          %option{value:'enchantment'} Enchantment
+          %option{value:'evocation'} Evocation
+          %option{value:'illusion'} Illusion
+          %option{value:'necromancy'} Necromancy
+          %option{value:'transmutation'} Transmutation
       %td
-        %select
+        %select#ritual.spells_search_input
+          %option{value:''}
+          %option{value:'true'} Yes
+          %option{value:'false'} No
       %td
-        %select
+        %select#casting-time.spells_search_input
+          %option{value:''}
+          %option{value:'1_action'} 1 action
+          %option{value:'1_bonus_action'} 1 bonus action
+          %option{value:'1_reaction'} 1 reaction
+          %option{value:'other'} other
       %td
-        %select
+        %select#components.spells_search_input
+          %option{value:''}
+          %option{value:'v'} V
+          %option{value:'s'} S
+          %option{value:'m'} M
+          %option{value:'c'} Cost
       %td
-        %select
+        %select#concentration.spells_search_input
+          %option{value:''}
+          %option{value:'true'} Yes
+          %option{value:'false'} No
       %td
-        %select
+        %select#source.spells_search_input
+          %option{value:''}
+          %option{value:'phb'} PHB
+          %option{value:'ee'} EE
       %td
         %a{href:'#'} Clear All
 
@@ -42,12 +94,13 @@
         %th.sortable-header Source
 
       - @spells.each do |spell|
-        %tr
-          %td= spell.name
-          %td= spell.level
-          %td= spell.school
-          %td= spell.ritual
-          %td= spell.casting_time
-          %td= spell.components
-          %td= spell.concentration
-          %td= spell.source
+        %tr.spell-row
+          %td.name= spell.name
+          %td.level= spell.level
+          %td.school= spell.school
+          %td.ritual= spell.ritual
+          %td.casting-time= spell.casting_time
+          %td.components= spell.components
+          %td.concentration= spell.concentration
+          %td.source= spell.source
+          %td.spell-class.hidden= spell.spell_class
