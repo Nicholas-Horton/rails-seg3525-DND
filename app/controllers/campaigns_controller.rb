@@ -39,6 +39,7 @@ class CampaignsController < ApplicationController
 
   def user_create
     @campaign = Campaign.new(campaign_params)
+    @campaign.user_id = current_user.id
 
     if @campaign.save
       redirect_to edit_campaign_path(@campaign), notice: 'Campaign was successfully created.'
@@ -49,7 +50,6 @@ class CampaignsController < ApplicationController
 
   def new_campaign
     @campaign = Campaign.new
-    @campaign.user_id = current_user.id
   end
 
   # PATCH/PUT /campaigns/1
