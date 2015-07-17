@@ -1,0 +1,36 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @spell.name
+%p
+  %b Description:
+  = @spell.description
+%p
+  %b Spell class:
+  = @spell.spell_class
+%p
+  %b Level:
+  = @spell.level
+%p
+  %b School:
+  = @spell.school
+%p
+  %b Ritual:
+  = @spell.ritual
+%p
+  %b Casting time:
+  = @spell.casting_time
+%p
+  %b Components:
+  = @spell.components
+%p
+  %b Concentration:
+  = @spell.concentration
+%p
+  %b Source:
+  = @spell.source
+
+= link_to 'Edit', edit_spell_path(@spell)
+\|
+= link_to 'Back', spells_path

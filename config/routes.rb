@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :spells
+
   root to: 'static#home'
 
   resources :users

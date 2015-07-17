@@ -32,11 +32,22 @@
 
     %table.sortable
       %tr
-        %th Name
-        %th Level
-        %th School
-        %th Ritual
-        %th Casting Time
-        %th Components
-        %th Concentration
-        %th Source
+        %th.sortable-header Name
+        %th.sortable-header Level
+        %th.sortable-header School
+        %th.sortable-header Ritual
+        %th.sortable-header Casting Time
+        %th.sortable-header Components
+        %th.sortable-header Concentration
+        %th.sortable-header Source
+
+      - @spells.each do |spell|
+        %tr
+          %td= spell.name
+          %td= spell.level
+          %td= spell.school
+          %td= spell.ritual
+          %td= spell.casting_time
+          %td= spell.components
+          %td= spell.concentration
+          %td= spell.source

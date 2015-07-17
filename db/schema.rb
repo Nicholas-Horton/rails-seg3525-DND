@@ -11,10 +11,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150518181721) do
+ActiveRecord::Schema.define(version: 20150717005418) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "spells", force: true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.string   "spell_class"
+    t.integer  "level"
+    t.string   "school"
+    t.boolean  "ritual"
+    t.string   "casting_time"
+    t.string   "components"
+    t.boolean  "concentration"
+    t.string   "source"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: true do |t|
     t.string   "email",                        null: false

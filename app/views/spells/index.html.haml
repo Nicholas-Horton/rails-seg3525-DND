@@ -1,0 +1,39 @@
+%h1 Listing spells
+
+%table
+  %thead
+    %tr
+      %th Name
+      %th Description
+      %th Spell class
+      %th Level
+      %th School
+      %th Ritual
+      %th Casting time
+      %th Components
+      %th Concentration
+      %th Source
+      %th
+      %th
+      %th
+
+  %tbody
+    - @spells.each do |spell|
+      %tr
+        %td= spell.name
+        %td= spell.description
+        %td= spell.spell_class
+        %td= spell.level
+        %td= spell.school
+        %td= spell.ritual
+        %td= spell.casting_time
+        %td= spell.components
+        %td= spell.concentration
+        %td= spell.source
+        %td= link_to 'Show', spell
+        %td= link_to 'Edit', edit_spell_path(spell)
+        %td= link_to 'Destroy', spell, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Spell', new_spell_path
