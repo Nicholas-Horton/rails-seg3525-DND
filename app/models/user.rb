@@ -5,4 +5,6 @@ class User < ActiveRecord::Base
   validates :password, length: { minimum: 3 }
   validates :password, confirmation: true
   validates :password_confirmation, presence: true
+
+  has_many :campaigns
 end
