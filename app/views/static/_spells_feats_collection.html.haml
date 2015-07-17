@@ -1,0 +1,17 @@
+#spells-feats-collection
+  %ul#spells-feats-tabs
+    %li
+      %input{type:'radio', name:'spells-feats-tabs', id:'spells-feats-tab1', checked:true}
+        %label.spells-feats-tab-label{for:'spells-feats-tab1'}
+          Spells
+      %div{id:"spells-feats-tab-content1", class:"spells-feats-tab-content"}
+        %p
+          = render 'static/spells_tab'
+    %li
+      %input{type:'radio', name:'spells-feats-tabs', id:'spells-feats-tab2', checked:false}
+        %label.spells-feats-tab-label{for:'spells-feats-tab2'}
+          Feats
+      %div{id:"spells-feats-tab-content2", class:"spells-feats-tab-content"}
+        %p
+          = render 'static/feats_tab'
+%br{style:'clear: both;'}
