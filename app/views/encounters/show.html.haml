@@ -1,0 +1,12 @@
+%p#notice= notice
+
+%p
+  %b Campaign:
+  = @encounter.campaign_id
+%p
+  %b Name:
+  = @encounter.name
+
+= link_to 'Edit', edit_encounter_path(@encounter)
+\|
+= link_to 'Back', encounters_path
