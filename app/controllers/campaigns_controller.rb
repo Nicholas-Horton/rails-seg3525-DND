@@ -37,6 +37,21 @@ class CampaignsController < ApplicationController
     end
   end
 
+  def user_create
+    @campaign = Campaign.new(campaign_params)
+
+    if @campaign.save
+      redirect_to edit_campaign_path(@campaign), notice: 'Campaign was successfully created.'
+    else
+      render :new
+    end
+  end
+
+  def new_campaign
+    @campaign = Campaign.new
+    @campaign.user_id = current_user.id
+  end
+
   # PATCH/PUT /campaigns/1
   # PATCH/PUT /campaigns/1.json
   def update
