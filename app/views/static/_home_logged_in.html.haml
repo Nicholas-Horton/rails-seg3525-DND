@@ -1,0 +1,43 @@
+.campaigns.twoColumns
+  %h2 My Campaigns
+  #summaryTable.table
+    .tr
+      .th Name
+      .th # of Encounters
+      .th Last Modified
+
+    - current_user.campaigns.each do |c|
+      -# TODO: link to better page
+      =link_to campaign_path(c), {class: 'tr'} do
+        .td= c.name
+        .td= c.encounters.length
+        .td= c.updated_at
+
+  = link_to 'Create new campaign...', new_campaign_campaigns_path
+
+.characters.twoColumns
+  %h2 My Player Characters
+  #summaryTable.table
+    .tr
+      .th Name
+      .th Class
+      .th Level
+      .th Campaign
+      .th Last Modified
+    -# TODO: implement PlayerCharacter and fill table
+    %a.tr{href: '/player_character'}
+      .td Tom
+      .td Fighter
+      .td 2
+      .td Campaign 1
+      .td 2015-07-03
+    %a.tr{href: '/player_character'}
+      .td John
+      .td Wizard
+      .td 16
+      .td test
+      .td 2014-09-03
+
+
+  -#TODO replace with real link
+  = link_to 'Create new player character...', 'http://www.google.com/search/ass'
