@@ -1,0 +1,60 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @creature.name
+%p
+  %b Armor class:
+  = @creature.armor_class
+%p
+  %b Hitpoints:
+  = @creature.hitpoints
+%p
+  %b Speed:
+  = @creature.speed
+%p
+  %b Strength:
+  = @creature.strength
+%p
+  %b Dexterity:
+  = @creature.dexterity
+%p
+  %b Constitution:
+  = @creature.constitution
+%p
+  %b Intelligence:
+  = @creature.intelligence
+%p
+  %b Wisdom:
+  = @creature.wisdom
+%p
+  %b Charisma:
+  = @creature.charisma
+%p
+  %b Saving throw:
+  = @creature.saving_throw
+%p
+  %b Damage immunities:
+  = @creature.damage_immunities
+%p
+  %b Condition immunities:
+  = @creature.condition_immunities
+%p
+  %b Senses:
+  = @creature.senses
+%p
+  %b Languages:
+  = @creature.languages
+%p
+  %b Challenge rating:
+  = @creature.challenge_rating
+%p
+  %b Experience:
+  = @creature.experience
+%p
+  %b Description:
+  = @creature.description
+
+= link_to 'Edit', edit_creature_path(@creature)
+\|
+= link_to 'Back', creatures_path

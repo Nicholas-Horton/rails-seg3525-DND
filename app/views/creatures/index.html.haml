@@ -1,0 +1,55 @@
+%h1 Listing creatures
+
+%table
+  %thead
+    %tr
+      %th Name
+      %th Armor class
+      %th Hitpoints
+      %th Speed
+      %th Strength
+      %th Dexterity
+      %th Constitution
+      %th Intelligence
+      %th Wisdom
+      %th Charisma
+      %th Saving throw
+      %th Damage immunities
+      %th Condition immunities
+      %th Senses
+      %th Languages
+      %th Challenge rating
+      %th Experience
+      %th Description
+      %th
+      %th
+      %th
+
+  %tbody
+    - @creatures.each do |creature|
+      %tr
+        %td= creature.name
+        %td= creature.armor_class
+        %td= creature.hitpoints
+        %td= creature.speed
+        %td= creature.strength
+        %td= creature.dexterity
+        %td= creature.constitution
+        %td= creature.intelligence
+        %td= creature.wisdom
+        %td= creature.charisma
+        %td= creature.saving_throw
+        %td= creature.damage_immunities
+        %td= creature.condition_immunities
+        %td= creature.senses
+        %td= creature.languages
+        %td= creature.challenge_rating
+        %td= creature.experience
+        %td= creature.description
+        %td= link_to 'Show', creature
+        %td= link_to 'Edit', edit_creature_path(creature)
+        %td= link_to 'Destroy', creature, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Creature', new_creature_path

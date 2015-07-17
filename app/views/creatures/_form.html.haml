@@ -1,0 +1,64 @@
+= form_for @creature do |f|
+  - if @creature.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@creature.errors.count, "error")} prohibited this creature from being saved:"
+      %ul
+        - @creature.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :name
+    = f.text_field :name
+  .field
+    = f.label :armor_class
+    = f.number_field :armor_class
+  .field
+    = f.label :hitpoints
+    = f.number_field :hitpoints
+  .field
+    = f.label :speed
+    = f.number_field :speed
+  .field
+    = f.label :strength
+    = f.number_field :strength
+  .field
+    = f.label :dexterity
+    = f.number_field :dexterity
+  .field
+    = f.label :constitution
+    = f.number_field :constitution
+  .field
+    = f.label :intelligence
+    = f.number_field :intelligence
+  .field
+    = f.label :wisdom
+    = f.number_field :wisdom
+  .field
+    = f.label :charisma
+    = f.number_field :charisma
+  .field
+    = f.label :saving_throw
+    = f.text_field :saving_throw
+  .field
+    = f.label :damage_immunities
+    = f.text_field :damage_immunities
+  .field
+    = f.label :condition_immunities
+    = f.text_field :condition_immunities
+  .field
+    = f.label :senses
+    = f.text_field :senses
+  .field
+    = f.label :languages
+    = f.text_field :languages
+  .field
+    = f.label :challenge_rating
+    = f.text_field :challenge_rating
+  .field
+    = f.label :experience
+    = f.number_field :experience
+  .field
+    = f.label :description
+    = f.text_field :description
+  .actions
+    = f.submit 'Save'

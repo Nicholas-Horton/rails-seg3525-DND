@@ -11,10 +11,33 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150717005418) do
+ActiveRecord::Schema.define(version: 20150717022509) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "creatures", force: true do |t|
+    t.string   "name"
+    t.integer  "armor_class"
+    t.integer  "hitpoints"
+    t.integer  "speed"
+    t.integer  "strength"
+    t.integer  "dexterity"
+    t.integer  "constitution"
+    t.integer  "intelligence"
+    t.integer  "wisdom"
+    t.integer  "charisma"
+    t.string   "saving_throw"
+    t.string   "damage_immunities"
+    t.string   "condition_immunities"
+    t.string   "senses"
+    t.string   "languages"
+    t.float    "challenge_rating"
+    t.integer  "experience"
+    t.string   "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "spells", force: true do |t|
     t.string   "name"
