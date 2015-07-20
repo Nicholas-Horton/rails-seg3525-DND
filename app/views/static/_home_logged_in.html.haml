@@ -13,7 +13,11 @@
         .td= c.encounters.length
         .td= c.updated_at
 
-  = link_to 'Create new campaign...', new_campaign_campaigns_path
+  = link_to  new_campaign_campaigns_path do
+    .button-table-background
+      %i.fa.fa-plus-circle.fa-lg
+      Campaign
+
 
 .characters.twoColumns
   %h2 My Player Characters
@@ -38,6 +42,8 @@
       .td test
       .td 2014-09-03
 
-
   -#TODO replace with real link
-  = link_to 'Create new player character...', 'http://www.google.com/search/ass'
+  = link_to  'http://www.google.com/search/ass' do
+    .button-table-background
+      %i.fa.fa-plus-circle.fa-lg
+      Player Character

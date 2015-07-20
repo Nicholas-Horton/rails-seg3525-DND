@@ -20,5 +20,8 @@
         .td 0
         .td= enc.updated_at
 
-= link_to 'Create new encounter...', new_encounter_encounters_path
+= link_to(new_encounter_encounters_path) do
+  .button-table-background
+    %i.fa.fa-plus-circle.fa-lg
+    Encounter
 
