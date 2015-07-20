@@ -34,9 +34,8 @@ class EncountersController < ApplicationController
     end
   end
 
-  def user_create(parent_campaign)
+  def user_create
     @encounter = Encounter.new(encounter_params)
-    @encounter.campaign_id = parent_campaign.id
 
     if @encounter.save
       redirect_to edit_encounter_encounter_path(@encounter), notice: 'Encounter was successfully created.'
@@ -44,7 +43,6 @@ class EncountersController < ApplicationController
       render :new
     end
   end
-
 
   def update
     if @encounter.update(encounter_params)

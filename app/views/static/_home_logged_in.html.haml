@@ -8,7 +8,6 @@
       .th Last Modified
 
     - current_user.campaigns.each do |c|
-      -# TODO: link to better page
       =link_to show_campaign_campaign_path(c), {class: 'tr'} do
         .td= c.name
         .td= c.encounters.length
