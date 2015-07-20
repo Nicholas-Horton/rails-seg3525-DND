@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   resources :campaigns do
+    get 'show_campaign', on: :member
+    get 'edit_campaign', on: :member
     get 'new_campaign', on: :collection
     post 'user_create', on: :collection
   end

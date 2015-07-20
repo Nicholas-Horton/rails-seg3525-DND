@@ -1,0 +1,16 @@
+%p#notice= notice
+
+%h2
+  = @campaign.name
+  = link_to(edit_campaign_campaign_path(@campaign)) do
+    %i.fa.fa-pencil
+
+#summaryTable.table
+  .table
+    .tr
+      .th Name
+      .th # of Monsters
+      .th Last Modified
+
+= link_to 'Create new encounter...', "/encounter_new"
+

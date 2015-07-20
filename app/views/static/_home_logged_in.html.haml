@@ -9,7 +9,7 @@
 
     - current_user.campaigns.each do |c|
       -# TODO: link to better page
-      =link_to campaign_path(c), {class: 'tr'} do
+      =link_to show_campaign_campaign_path(c), {class: 'tr'} do
         .td= c.name
         .td= c.encounters.length
         .td= c.updated_at
