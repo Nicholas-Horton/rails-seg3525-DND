@@ -171,9 +171,60 @@
     %legend
       My Attacks
 
+    %table
+      %tr
+        %th Name
+        %th Proficient?
+        %th ATK Bonus
+        %th Damage/Type
+        %th &nbsp
+      %tr.attack-row{description:'Weight: 6lbs Properties: Heavy, two-handed'}
+        %td
+          Greatsword
+        %td
+          %input{type:'checkbox', id:'attack1_proficiency'}
+        %td
+          %input.attack-bonus{type:'text', id:'attack1_attack_bonus', value:'+5'}
+        %td
+          %input.attack-damage{type:'text', id:'attack1_damage', value:'2d6 slashing'}
+        %td.delete
+          %i.fa.fa-minus-circle
+          Delete
+    %a.add-button{href:'#'}
+      %i.fa.fa-plus-circle.fa-2x
+
   %fieldset.spells
     %legend
       My Spells
+
+    %table
+      %tr
+        %th Name
+        %th Level
+        %th Casting Time
+        %th Components
+        %th Concentration
+        %th Ritual
+        %th &nbsp
+      %tr.spell-row{description:'Range: 60ft Duration: Instantaneous You hurl a bubble of acid. Choose one creature within range, or choose two creatures within 5 feet of each other. A target must succeed on a Dexterity saving throw or take 1d6 acid damage. This spell\'s damage increases by 1d6 when you reach 5th level(2d6), 11th level(3d6), and 17th level(4d6).'}
+        %td
+          Acid Splash
+        %td
+          Cantrip
+        %td
+          1 action
+        %td
+          VS
+        %td
+          No
+        %td
+          No
+        %td.delete
+          %i.fa.fa-minus-circle
+          Delete
+
+    %a.add-button{href:'#'}
+      %i.fa.fa-plus-circle.fa-2x
 
 %fieldset.feats
   %legend
