@@ -1,3 +1,10 @@
+%p#notice= notice
+
+%h2
+  = @encounter.name
+  = link_to(edit_encounter_encounter_path(@encounter)) do
+    %i.fa.fa-pencil
+
 #encounterHeading
   %input{name: "encounter-name", type: "text/plain"}
   in campaign

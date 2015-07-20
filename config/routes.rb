@@ -3,9 +3,15 @@ Rails.application.routes.draw do
     get 'show_campaign', on: :member
     get 'edit_campaign', on: :member
     get 'new_campaign', on: :collection
+    get 'new_encounter', on: :member
     post 'user_create', on: :collection
   end
-  resources :encounters
+  resources :encounters do
+    get 'show_encounter', on: :member
+    get 'edit_encounter', on: :member
+    get 'new_encounter', on: :collection
+    post 'user_create', on: :collection
+  end
   resources :creatures
   resources :spells
   resources :users

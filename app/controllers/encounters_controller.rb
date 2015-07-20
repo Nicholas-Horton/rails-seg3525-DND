@@ -1,5 +1,5 @@
 class EncountersController < ApplicationController
-  before_action :set_encounter, only: [:show, :edit, :update, :destroy]
+  before_action :set_encounter, only: [:show, :edit, :update, :destroy, :edit_encounter, :show_encounter]
 
   def index
     @encounters = Encounter.all
@@ -8,11 +8,21 @@ class EncountersController < ApplicationController
   def show
   end
 
+  def show_encounter
+  end
+
   def new
     @encounter = Encounter.new
   end
 
+  def new_encounter
+    @encounter = Encounter.new
+  end
+
   def edit
+  end
+
+  def edit_encounter
   end
 
   def create
@@ -23,6 +33,18 @@ class EncountersController < ApplicationController
       render :new
     end
   end
+
+  def user_create(parent_campaign)
+    @encounter = Encounter.new(encounter_params)
+    @encounter.campaign_id = parent_campaign.id
+
+    if @encounter.save
+      redirect_to edit_encounter_encounter_path(@encounter), notice: 'Encounter was successfully created.'
+    else
+      render :new
+    end
+  end
+
 
   def update
     if @encounter.update(encounter_params)
