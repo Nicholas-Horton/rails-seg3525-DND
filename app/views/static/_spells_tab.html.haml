@@ -94,7 +94,7 @@
         %th Source
 
       - @spells.each do |spell|
-        %tr.spell-row
+        %tr.spell-row.spell{spell_id:spell.id}
           %td.name= spell.name
           %td.level= spell.level
           %td.school= spell.school
