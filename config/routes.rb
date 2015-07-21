@@ -3,11 +3,13 @@ Rails.application.routes.draw do
     get 'new_campaign', on: :collection
     post 'user_create', on: :collection
   end
+  get 'spells/get_spell' => 'spells#get_spell'
   resources :encounters
   resources :creatures
   resources :spells
   resources :users
   resources :user_sessions
+
 
   root to: 'static#home'
 

@@ -1,3 +1,75 @@
-// Place all the styles related to the Spells controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.spell-tooltip {
+  display: none;
+  position: absolute;
+  z-index: 10000;
+  width: 300px;
+  background-color: red;
+  border-radius: 8px;
+
+  .spell-tooltip-content {
+    background-color: white;
+    margin: 10px 10px 0 10px;
+    border-radius: 8px;
+
+    .spell-name {
+      font-size: 24px;
+      text-align: center;
+      border-bottom: 4px solid red;
+      padding: 4px;
+      display: inline-block;
+      width: 100%;
+    }
+
+    .spell-casting-time, .spell-range, .spell-components, .spell-duration {
+      text-align: center;
+      display: inline-block;
+      width: calc(50% - 2px);
+      font-size: 16px;
+      vertical-align: top;
+
+      .title {
+        color: red;
+        font-weight: bold;
+      }
+    }
+
+    .spell-casting-time, .spell-range {
+      border-bottom: 4px solid red;
+    }
+
+    .spell-casting-time, .spell-components {
+      border-right: 2px solid red;
+    }
+
+    .spell-range, .spell-duration {
+      border-left: 2px solid red;
+    }
+
+    .spell-material-components {
+      font-size: 12px;
+      background-color: red;
+      padding: 2px 4px;
+    }
+
+    .spell-description {
+      padding: 8px;
+      overflow-y: auto;
+      height: 200px;
+      font-size: 12px;
+    }
+  }
+
+  .spell-class {
+    font-size: 12px;
+    padding: 4px 8px;
+    width: calc(100% - 16px);
+    text-align: left;
+  }
+
+  .spell-level {
+    font-size: 12px;
+    padding: 4px 8px;
+    width: calc(100% - 16px);
+    text-align: right;
+  }
+}

@@ -37,6 +37,26 @@ class SpellsController < ApplicationController
     redirect_to spells_url, notice: 'Spell was successfully destroyed.'
   end
 
+  def get_spell
+    s = Spell.find(params[:spell_id])
+    spell_info = {
+      spellName: s.name,
+      spellCastingTime: s.casting_time,
+      spellRange: s.range,
+      spellComponents: s.components,
+      spellDuration: s.duration,
+      spellMaterialComponents: s.material_components,
+      spellDescription: s.description,
+      spellClass: s.spell_class,
+      spellSchool: s.school,
+      spellLevel: s.level,
+      concentration: s.concentration,
+      ritual: s.ritual
+    }.to_json
+    puts spell_info
+    render text: spell_info
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_spell
