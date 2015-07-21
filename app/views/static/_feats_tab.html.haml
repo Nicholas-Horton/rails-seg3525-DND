@@ -1,1 +1,29 @@
-ass
+#feats-tab
+
+  %label{for:'name-search'} Name:
+  %i.fa.fa-search.search-icon
+  %input{type:'search', id:'name-search'}
+
+  OR
+
+  %label{for:'class'} Class:
+  %select{id:'feat-class'}
+    %option{value:''}
+      %option{value:'bard'} Bard
+      %option{value:'cleric'} Cleric
+      %option{value:'druid'} Druid
+      %option{value:'paladin'} Paladin
+      %option{value:'ranger'} Ranger
+      %option{value:'sorcerer'} Sorcerer
+      %option{value:'warlock'} Warlock
+      %option{value:'wizard'} Wizard
+
+  %table
+    %tr
+      %th
+        Name
+      %th
+        Description
+      %th
+        Source
+        

@@ -1,0 +1,80 @@
+%p#notice= notice
+
+#encounterHeading
+  %h2
+    = @encounter.name
+    = link_to(edit_encounter_encounter_path(@encounter)) do
+      %i.fa.fa-pencil
+  in campaign
+  %select.campaignName
+    %option{value: "My New Campaign"}="My New Campaign"
+    %option{value: "Campaign 1"}="Campaign 1"
+    %option{value: "My New Campaign"}="test"
+  Creatures
+
+#encounterCreaturesTable.table
+  .tr
+    #monster1.td
+      .name
+        %input{name: "encounter-name", value: "Goblin 1", type: "text/plain", size: 12}
+      .attribute-set-wrapper
+        .attribute-couple
+          %div.attribute
+            %label HP:
+            %input.ability_score{type:'number', name:'hp', min:'0', max:'4', value:'4'}
+          %div.attribute
+            %label Max HP:
+            %input.ability_score{type:'number', name:'hp', min:'0', max:'4', value:'4'}
+      .attribute-set-wrapper
+        .attribute-couple
+          %div.attribute
+            %label AC:
+            %input.ability_score{type:'number', name:'hp', min:'0', max:'4', value:'4'}
+          %div.attribute
+            %label Initiative:
+            %input.ability_score{type:'number', name:'hp', min:'0', max:'4', value:'4'}
+      %div#fieldset-wrapper
+        %fieldset.attacks
+          %legend
+            Attacks
+          %table
+            %tr
+              %th Name
+              %th ATK Bonus
+              %th Damage/Type
+              %th &nbsp
+            %tr.attack-row{description:'Weight: 6lbs Properties: Heavy, two-handed'}
+              %td
+                Dagger
+              %td
+                %input.attack-bonus{type:'text', id:'attack1_attack_bonus', value:'+5'}
+              %td
+                %input.attack-damage{type:'text', id:'attack1_damage', value:'2d6 slashing'}
+              %td.delete
+                %i.fa.fa-minus-circle
+                Delete
+          %a.add-button{href:'#'}
+            %i.fa.fa-plus-circle
+        %fieldset.spells
+          %legend
+            Spells
+          %table
+            %tr
+              %th Name
+              %th Casting Time
+              %th &nbsp
+            %tr.spell-row{description:'Range: 60ft Duration: Instantaneous You hurl a bubble of acid. Choose one creature within range, or choose two creatures within 5 feet of each other. A target must succeed on a Dexterity saving throw or take 1d6 acid damage. This spell\'s damage increases by 1d6 when you reach 5th level(2d6), 11th level(3d6), and 17th level(4d6).'}
+              %td
+                Acid Splash
+              %td
+                1 action
+              %td.delete
+                %i.fa.fa-minus-circle
+                Delete
+          %a.add-button{href:'#'}
+            %i.fa.fa-plus-circle
+        %fieldset.other
+          %legend
+            Other
+          Notes:
+          %textarea{cols: "1", rows: "5"}

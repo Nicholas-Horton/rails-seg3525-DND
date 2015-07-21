@@ -1,0 +1,26 @@
+#feats-tab{
+  font-size: small;
+  table {
+    width:100%;
+  }
+  select{
+    width: 150px;
+  }
+
+  .search-icon {
+    position: absolute;
+    top: 22px;
+    left: 71px;
+  }
+
+  input[type='search'] {
+    padding-left: 18px;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+
+
+}

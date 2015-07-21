@@ -1,5 +1,5 @@
 class CampaignsController < ApplicationController
-  before_action :set_campaign, only: [:show, :edit, :update, :destroy]
+  before_action :set_campaign, only: [:show, :edit, :update, :destroy, :edit_campaign, :show_campaign]
 
   def index
     @campaigns = Campaign.all
@@ -8,6 +8,10 @@ class CampaignsController < ApplicationController
   def show
   end
 
+  def show_campaign
+  end
+
+  # GET /campaigns/new
   def new
     @campaign = Campaign.new
   end
@@ -29,7 +33,7 @@ class CampaignsController < ApplicationController
     @campaign.user_id = current_user.id
 
     if @campaign.save
-      redirect_to edit_campaign_path(@campaign), notice: 'Campaign was successfully created.'
+      redirect_to edit_campaign_campaign_path(@campaign), notice: 'Campaign was successfully created.'
     else
       render :new
     end

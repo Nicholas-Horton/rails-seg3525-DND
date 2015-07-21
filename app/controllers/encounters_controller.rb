@@ -1,5 +1,5 @@
 class EncountersController < ApplicationController
-  before_action :set_encounter, only: [:show, :edit, :update, :destroy]
+  before_action :set_encounter, only: [:show, :edit, :update, :destroy, :edit_encounter, :show_encounter]
 
   def index
     @encounters = Encounter.all
@@ -8,17 +8,37 @@ class EncountersController < ApplicationController
   def show
   end
 
+  def show_encounter
+  end
+
   def new
+    @encounter = Encounter.new
+  end
+
+  def new_encounter
     @encounter = Encounter.new
   end
 
   def edit
   end
 
+  def edit_encounter
+  end
+
   def create
     @encounter = Encounter.new(encounter_params)
     if @encounter.save
       redirect_to @encounter, notice: 'Encounter was successfully created.'
+    else
+      render :new
+    end
+  end
+
+  def user_create
+    @encounter = Encounter.new(encounter_params)
+
+    if @encounter.save
+      redirect_to edit_encounter_encounter_path(@encounter), notice: 'Encounter was successfully created.'
     else
       render :new
     end

@@ -1,15 +1,22 @@
 Rails.application.routes.draw do
+  get 'spells/get_spell' => 'spells#get_spell'
   resources :campaigns do
+    get 'show_campaign', on: :member
+    get 'edit_campaign', on: :member
     get 'new_campaign', on: :collection
     post 'user_create', on: :collection
   end
-  get 'spells/get_spell' => 'spells#get_spell'
-  resources :encounters
+  resources :encounters do
+    get 'show_encounter', on: :member
+    get 'edit_encounter', on: :member
+    get 'new_encounter', on: :collection
+    post 'user_create', on: :collection
+  end
+
   resources :creatures
   resources :spells
   resources :users
   resources :user_sessions
-
 
   root to: 'static#home'
 

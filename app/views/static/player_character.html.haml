@@ -14,4 +14,17 @@
       %p
         = render 'static/other_info_tab'
 
+%table.char-info
+  %tr
+    %td.name
+      Tom the Fighter
+    %td.level
+      Level:
+    %td
+      %input#level-value{type:'number', value:'2'}
+    %td.proficiency
+      Proficiency bonus:
+    %td
+      %input#level-value{type:'text', value:'+2', readonly:'true'}
+
 %br{style:'clear: both;'}

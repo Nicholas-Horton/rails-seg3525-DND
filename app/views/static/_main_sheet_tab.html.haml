@@ -23,148 +23,148 @@
   %div.attribute-wrapper
     %div.attribute
       Strength:
-      %input.ability_score{type:'number', name:'strength', min:'1', max:'30', value:'8'}
+      %input#strength.ability_score{type:'number', name:'strength', min:'1', max:'30', value:'16'}
       %input.modifier{type:'text', id:'strength_modifier', readonly:'true'}
 
       %hr
-      %input{type:'checkbox', id:'strength_save_proficiency'}
+      %input{type:'checkbox', id:'strength_save_proficiency', checked:'true'}
       Saving Throws:
-      %input.modifier{type:'text', id:'strength_save_modifier', readonly:'true'}
+      %input.modifier{type:'text', id:'strength_save_modifier', readonly:'true', value:'+5'}
 
       %br
-      %input{type:'checkbox', id:'athletics_proficiency'}
+      %input{type:'checkbox', id:'athletics_proficiency', checked:'true'}
       Athletics:
-      %input.modifier{type:'text', id:'athletics_modifier', readonly:'true'}
+      %input.modifier{type:'text', id:'athletics_modifier', readonly:'true', value:"+5"}
     %div.attribute
       Dexterity:
-      %input.ability_score{type:'number', name:'dexterity', min:'1', max:'30', value:'8'}
+      %input#dexterity.ability_score{type:'number', name:'dexterity', min:'1', max:'30', value:'10'}
       %input.modifier{type:'text', id:'dexterity_modifier', readonly:'true'}
 
       %hr
       %input{type:'checkbox', id:'dexterity_save_proficiency'}
       Saving Throws:
-      %input.modifier{type:'text', id:'dexterity_save_modifier', readonly:'true'}
+      %input.modifier{type:'text', id:'dexterity_save_modifier', readonly:'true', value:'-1'}
 
       %br
       %input{type:'checkbox', id:'acrobatics_proficiency'}
       Acrobatics:
-      %input.modifier{type:'text', id:'acrobatics_modifier', readonly:'true'}
+      %input.modifier{type:'text', id:'acrobatics_modifier', readonly:'true', value:'-1'}
 
       %br
       %input{type:'checkbox', id:'sleight_of_hand_proficiency'}
       Sleight of hand:
-      %input.modifier{type:'text', id:'sleight_of_hand_modifier', readonly:'true'}
+      %input.modifier{type:'text', id:'sleight_of_hand_modifier', readonly:'true', value:'-1'}
 
       %br
       %input{type:'checkbox', id:'stealth_proficiency'}
       Stealth:
-      %input.modifier{type:'text', id:'stealth_modifier', readonly:'true'}
+      %input.modifier{type:'text', id:'stealth_modifier', readonly:'true', value:'-1'}
     %div.attribute
       Constitution:
-      %input.ability_score{type:'number', name:'constitution', min:'1', max:'30', value:'8'}
+      %input#constitution.ability_score{type:'number', name:'constitution', min:'1', max:'30', value:'16'}
       %input.modifier{type:'text', id:'constitution_modifier', readonly:'true'}
 
       %hr
-      %input{type:'checkbox', id:'constitution_save_proficiency'}
+      %input{type:'checkbox', id:'constitution_save_proficiency', checked:'true'}
       Saving Throws:
-      %input.modifier{type:'text', id:'constitution_save_modifier', readonly:'true'}
+      %input.modifier{type:'text', id:'constitution_save_modifier', readonly:'true', value:'+5'}
     %div.attribute
       Intelligence:
-      %input.ability_score{type:'number', name:'intelligence', min:'1', max:'30', value:'8'}
+      %input#intelligence.ability_score{type:'number', name:'intelligence', min:'1', max:'30', value:'8'}
       %input.modifier{type:'text', id:'intelligence_modifier', readonly:'true'}
 
       %hr
       %input{type:'checkbox', id:'intelligence_save_proficiency'}
       Saving Throws:
-      %input.modifier{type:'text', id:'intelligence_save_modifier', readonly:'true'}
+      %input.modifier{type:'text', id:'intelligence_save_modifier', readonly:'true', value:'-1'}
 
       %br
       %input{type:'checkbox', id:'arcana_proficiency'}
       Arcana:
-      %input.modifier{type:'text', id:'arcana_modifier', readonly:'true'}
+      %input.modifier{type:'text', id:'arcana_modifier', readonly:'true', value:'-1'}
 
       %br
       %input{type:'checkbox', id:'history_proficiency'}
       History:
-      %input.modifier{type:'text', id:'history_modifier', readonly:'true'}
+      %input.modifier{type:'text', id:'history_modifier', readonly:'true', value:'-1'}
 
       %br
       %input{type:'checkbox', id:'investigation_proficiency'}
       Investigation:
-      %input.modifier{type:'text', id:'investigation_modifier', readonly:'true'}
+      %input.modifier{type:'text', id:'investigation_modifier', readonly:'true', value:'-1'}
 
       %br
       %input{type:'checkbox', id:'nature_proficiency'}
       Nature:
-      %input.modifier{type:'text', id:'nature_modifier', readonly:'true'}
+      %input.modifier{type:'text', id:'nature_modifier', readonly:'true', value:'-1'}
 
       %br
       %input{type:'checkbox', id:'religion_proficiency'}
       Religion:
-      %input.modifier{type:'text', id:'religion_modifier', readonly:'true'}
+      %input.modifier{type:'text', id:'religion_modifier', readonly:'true', value:'-1'}
     %div.attribute
       Wisdom:
-      %input.ability_score{type:'number', name:'wisdom', min:'1', max:'30', value:'8'}
+      %input#wisdom.ability_score{type:'number', name:'wisdom', min:'1', max:'30', value:'12'}
       %input.modifier{type:'text', id:'wisdom_modifier', readonly:'true'}
 
       %hr
       %input{type:'checkbox', id:'wisdom_save_proficiency'}
       Saving Throws:
-      %input.modifier{type:'text', id:'wisdom_save_modifier', readonly:'true'}
+      %input.modifier{type:'text', id:'wisdom_save_modifier', readonly:'true', value:'+1'}
 
       %br
       %input{type:'checkbox', id:'animal_handling_proficiency'}
       Animal handling:
-      %input.modifier{type:'text', id:'animal_handling_modifier', readonly:'true'}
+      %input.modifier{type:'text', id:'animal_handling_modifier', readonly:'true', value:'+1'}
 
       %br
       %input{type:'checkbox', id:'insight_proficiency'}
       Insight:
-      %input.modifier{type:'text', id:'insight_modifier', readonly:'true'}
+      %input.modifier{type:'text', id:'insight_modifier', readonly:'true', value:'+1'}
 
       %br
-      %input{type:'checkbox', id:'medicine_proficiency'}
+      %input{type:'checkbox', id:'medicine_proficiency', checked:'true'}
       Medicine:
-      %input.modifier{type:'text', id:'medicine_modifier', readonly:'true'}
+      %input.modifier{type:'text', id:'medicine_modifier', readonly:'true', value:'+3'}
 
       %br
-      %input{type:'checkbox', id:'perception_proficiency'}
+      %input{type:'checkbox', id:'perception_proficiency', checked:'true'}
       Perception:
-      %input.modifier{type:'text', id:'perception_modifier', readonly:'true'}
+      %input.modifier{type:'text', id:'perception_modifier', readonly:'true', value:'+3'}
 
       %br
       %input{type:'checkbox', id:'survival_proficiency'}
       Survival:
-      %input.modifier{type:'text', id:'survival_modifier', readonly:'true'}
+      %input.modifier{type:'text', id:'survival_modifier', readonly:'true', value:'+1'}
     %div.attribute
       Charisma:
-      %input.ability_score{type:'number', name:'charisma', min:'1', max:'30', value:'8'}
+      %input#charisma.ability_score{type:'number', name:'charisma', min:'1', max:'30', value:'14'}
       %input.modifier{type:'text', id:'charisma_modifier', readonly:'true'}
 
       %hr
       %input{type:'checkbox', id:'charisma_save_proficiency'}
       Saving Throws:
-      %input.modifier{type:'text', id:'charisma_save_modifier', readonly:'true'}
+      %input.modifier{type:'text', id:'charisma_save_modifier', readonly:'true', value:'+2'}
 
       %br
       %input{type:'checkbox', id:'deception_proficiency'}
       Deception:
-      %input.modifier{type:'text', id:'deception_modifier', readonly:'true'}
+      %input.modifier{type:'text', id:'deception_modifier', readonly:'true', value:'+2'}
 
       %br
-      %input{type:'checkbox', id:'intimidation_proficiency'}
+      %input{type:'checkbox', id:'intimidation_proficiency', checked:'true'}
       Intimidation:
-      %input.modifier{type:'text', id:'intimidation_modifier', readonly:'true'}
+      %input.modifier{type:'text', id:'intimidation_modifier', readonly:'true', value:'+4'}
 
       %br
       %input{type:'checkbox', id:'performance_proficiency'}
       Performance:
-      %input.modifier{type:'text', id:'performance_modifier', readonly:'true'}
+      %input.modifier{type:'text', id:'performance_modifier', readonly:'true', value:'+2'}
 
       %br
       %input{type:'checkbox', id:'persuasion_proficiency'}
       Persuasion:
-      %input.modifier{type:'text', id:'persuasion_modifier', readonly:'true'}
+      %input.modifier{type:'text', id:'persuasion_modifier', readonly:'true', value:'+2'}
 
 %div#attack-spell-wrapper
   %fieldset.attacks
@@ -182,7 +182,7 @@
         %td
           Greatsword
         %td
-          %input{type:'checkbox', id:'attack1_proficiency'}
+          %input{type:'checkbox', id:'attack1_proficiency', checked:'true'}
         %td
           %input.attack-bonus{type:'text', id:'attack1_attack_bonus', value:'+5'}
         %td
@@ -245,3 +245,18 @@
 %fieldset.feats
   %legend
     My Feats
+
+  %table
+    %tr
+      %th Name
+      %th Description
+      %th &nbsp
+    %tr
+      %td Athlete
+      %td When you are prone, standing up uses only 5 feet of your movement. Climbing doesn't halve your speed.
+      %td.delete
+        %i.fa.fa-minus-circle
+        Delete
+
+  %a.add-button{href:'#'}
+    %i.fa.fa-plus-circle.fa-2x

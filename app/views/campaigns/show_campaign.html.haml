@@ -1,0 +1,27 @@
+%p#notice= notice
+
+%h2
+  = @campaign.name
+  = link_to(edit_campaign_campaign_path(@campaign)) do
+    %i.fa.fa-pencil
+
+#summaryTable.table
+  .table
+    .tr
+      .th Encounter
+      .th # of Monsters
+      .th Last Modified
+
+    - @campaign.encounters.each do |enc|
+      -# TODO: link to better page
+      =link_to show_encounter_encounter_path(enc), {class: 'tr'} do
+        .td= enc.name
+        -#.td= enc.creatures.length
+        .td 0
+        .td= enc.updated_at
+
+= link_to(new_encounter_encounters_path) do
+  .button-table-background
+    %i.fa.fa-plus-circle.fa-lg
+    Encounter
+

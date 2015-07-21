@@ -47,3 +47,27 @@
     display: inline-block;
   }
 }
+
+.char-info{
+  .name{
+    font-size: 26px;
+    font-weight: bold;
+  }
+  .level{
+    font-size: 18px;
+  }
+  .proficiency{
+    font-size: 16px;
+  }
+  #level-value{
+    padding: 2px;
+    width: 30px;
+    border: 1px solid cornflowerblue;
+    border-radius: 3px;
+  }
+  td {
+    padding: 10px;
+    vertical-align: middle;
+    text-align: left;
+  }
+}

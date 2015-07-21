@@ -1,6 +1,8 @@
-%h1 New campaign
+%h1
+  Editing
+  = @campaign.name
 
-= form_for @campaign, url: 'user_create' do |f|
+= form_for @campaign do |f|
   - if @campaign.errors.any?
     #error_explanation
       %h2= "#{pluralize(@campaign.errors.count, "error")} prohibited this campaign from being saved:"
@@ -13,3 +15,4 @@
     = f.text_field :name
   .actions
     = f.submit 'Save', {:class=>"button"}
+    = link_to 'Back', show_campaign_campaign_path(@campaign), {:class=>"button"}
