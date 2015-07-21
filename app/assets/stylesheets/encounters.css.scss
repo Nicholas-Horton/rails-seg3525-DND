@@ -1,3 +1,180 @@
-// Place all the styles related to the Encounters controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+#encounterHeading{
+  h2{
+    display: inline-block;
+  }
+}
+
+#encounterCreaturesTable{
+    display: table;
+    background-color: #DDD;
+    width: 100%;
+
+    .tr {
+      display: table-row;
+
+      .td {
+        border-bottom: 4px solid #BBB;
+        padding: 10px;
+
+        .name{
+          padding-top: 10px;
+          vertical-align: middle;
+          display: inline-block;
+        }
+
+        .attribute-set-wrapper {
+          padding-top: 10px;
+          display: inline-block;
+          vertical-align: middle;
+          .attribute-couple {
+            display: table;
+            .attribute {
+              display: table-row;
+              label {
+                display: table-cell;
+              }
+              .ability-score {
+                display: table-cell;
+              }
+            }
+          }
+        }
+
+        #fieldset-wrapper{
+          height: 85%;
+          display: inline-block;
+          vertical-align: top;
+          .attacks {
+            vertical-align:  top;
+            display: inline-block;
+            height: 100%;
+            legend {
+              font-size: medium;
+              font-weight: bold;
+            }
+
+            .add-button{
+              color: green;
+              padding: 10px;
+            }
+
+            table {
+              border-collapse: collapse;
+              th {
+                font-size: smaller;
+                color: #666666;
+              }
+              td, th {
+                padding: 0 10px 0 10px;
+              }
+              td {
+                text-align: center;
+                font-size: smaller;
+                background-color: #DDD;
+              }
+              .attack-damage {
+                width: 100px
+              }
+              .attack-bonus {
+                width: 25px;
+                border: 2px solid #99CCFF;
+                border-radius: 5px;
+              }
+
+              .delete {
+                color: darkred;
+              }
+              .delete:hover {
+                background-color: rgba(102, 0, 9, 0.38);
+              }
+
+              tr:hover td {
+                background-color: #999999;
+              }
+
+              .attack-row:hover:after {
+                background: #333;
+                background: rgba(0, 0, 0, .8);
+                border-radius: 5px;
+                color: #fff;
+                content: attr(description);
+                padding: 5px 15px;
+                position: absolute;
+                z-index: 999;
+                width: 500px;
+              }
+            }
+          }
+          .spells {
+            vertical-align:  top;
+            .add-button{
+              color: green;
+              padding: 10px;
+            }
+
+            display: inline-block;
+            height: 100%;
+            legend {
+              font-size: medium;
+              font-weight: bold;
+            }
+
+            table {
+              border-collapse: collapse;
+              th {
+                font-size: smaller;
+                color: #666666;
+              }
+              td, th {
+                padding: 0 10px 0 10px;
+              }
+              td {
+                text-align: center;
+                font-size: smaller;
+                background-color: #DDD;
+              }
+
+              .delete {
+                color: darkred;
+              }
+              .delete:hover {
+                background-color: rgba(102, 0, 9, 0.38);
+              }
+
+              tr:hover td {
+                background-color: #999999;
+              }
+
+              .spell-row:hover:after {
+                background: #333;
+                background: rgba(0, 0, 0, .8);
+                border-radius: 5px;
+                color: #fff;
+                content: attr(description);
+                padding: 5px 15px;
+                position: absolute;
+                z-index: 999;
+                width: 500px;
+              }
+            }
+          }
+          .other{
+            vertical-align:  top;
+            display: inline-block;
+            height: 100%;
+            legend {
+              font-size: medium;
+              font-weight: bold;
+            }
+          }
+        }
+
+        display: table-cell;
+      }
+    }
+
+    .th {
+      display: table-cell;
+      font-weight: bold;
+    }
+}
