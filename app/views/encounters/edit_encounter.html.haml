@@ -13,5 +13,5 @@
     = f.label :name
     = f.text_field :name
   .actions
-    = f.submit 'Save'
-    = link_to 'Back', show_encounter_encounter_path(@encounter), {class=>"button"}
+    = f.submit 'Save', {:class=>"button"}
+    = link_to 'Back', show_encounter_encounter_path(@encounter), {:class=>"button"}
