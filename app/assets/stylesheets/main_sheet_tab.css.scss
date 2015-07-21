@@ -166,6 +166,30 @@
     font-size: medium;
     font-weight: bold;
   }
+
+  .add-button{
+    color: green;
+    padding: 10px;
+  }
+
+  .delete {
+    color: darkred;
+  }
+  .delete:hover {
+    background-color: rgba(102, 0, 9, 0.38);
+  }
+
+  table {
+    border-collapse: collapse;
+    th {
+      font-size: smaller;
+      color: #666666;
+    }
+
+    td, th {
+      padding: 0 10px 0 10px;
+    }
+  }
 }
 
 
