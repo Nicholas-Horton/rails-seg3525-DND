@@ -5,6 +5,8 @@ $(document).ready ->
   addDeleteSpellButtons()
   $("#attack-spell-wrapper .spells .remove-button").bind "click", ->
     toggleRemoveSpells()
+  rearrangeSpells()
+  $('.spells .spell + .delete').hover toggleDeleteWarning
 
 
 calculateAttributes = () ->
@@ -46,10 +48,24 @@ calculateAttributes = () ->
     $('#charisma_modifier').val(Math.floor(((charisma - 10)/2)))
 
 addDeleteSpellButtons = () ->
-  $('#attack-spell-wrapper .spells .spell').after("<div class='delete td'><i class='fa fa-minus-circle'></i>Delete</div>")
+  $('#attack-spell-wrapper .spells .spell').after("<div class='delete'><i class='fa fa-minus-circle'></i>Delete</div>")
 
 toggleRemoveSpells = () ->
   if $('#attack-spell-wrapper .spells .spell + .delete').css('visibility') == 'hidden'
     $('#attack-spell-wrapper .spells .spell + .delete').css('visibility', 'visible')
   else
     $('#attack-spell-wrapper .spells .spell + .delete').css('visibility', 'hidden')
+
+rearrangeSpells = () ->
+  spells = $('#attack-spell-wrapper .spells .spell').parent()
+  spells.detach()
+  numberPerColumn = Math.ceil(spells.length / 4)
+  n = 0
+  for s in spells
+    if n % numberPerColumn == 0
+      $('#attack-spell-wrapper .spells').append("<div class='spell-column'></div>")
+    $('#attack-spell-wrapper .spells .spell-column:last').append(s)
+    n++
+
+toggleDeleteWarning = (e) ->
+  $(e.target).parent().toggleClass('delete-warning')
