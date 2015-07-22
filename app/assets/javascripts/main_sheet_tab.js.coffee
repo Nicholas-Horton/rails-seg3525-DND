@@ -6,7 +6,7 @@ $(document).ready ->
   $("#attack-spell-wrapper .spells .remove-button").bind "click", ->
     toggleRemoveSpells()
   rearrangeSpells()
-  $('.spells .spell + .delete').hover toggleDeleteWarning
+  $('.spells .spell + .delete').hover addDeleteWarning, removeDeleteWarning
   if $('input#page-info').val() == 'player_character'
     addAddSpellButtons()
 
@@ -68,8 +68,12 @@ rearrangeSpells = () ->
     $('#attack-spell-wrapper .spells .spell-column:last').append(s)
     n++
 
-toggleDeleteWarning = (e) ->
-  $(e.target).parent().toggleClass('delete-warning')
+addDeleteWarning = (e) ->
+  $('.spell-block').removeClass('delete-warning')
+  $(e.target).parent().addClass('delete-warning')
+
+removeDeleteWarning = (e) ->
+  $('.spell-block').removeClass('delete-warning')
 
 addAddSpellButtons = () ->
   $('#spells-feats-tabs #spells-tab #spell-table tr:first').prepend("<th class='add-button-header'></th>")
