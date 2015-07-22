@@ -1,10 +1,11 @@
 #encounterHeading{
   h2{
     display: inline-block;
+    margin-right: 10px;
   }
 }
 
-#encounterCreaturesTable{
+#encounter-creatures-table{
   display: table;
   background-color: #DDD;
   width: 100%;
@@ -50,6 +51,7 @@
 
     #fieldset-wrapper{
       height: 60%;
+      width: 100%;
       display: inline-block;
       vertical-align: top;
       .attacks {

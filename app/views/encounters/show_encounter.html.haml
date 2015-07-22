@@ -7,12 +7,10 @@
       %i.fa.fa-pencil
   in campaign
   %select.campaignName
-    %option{value: "My New Campaign"}="My New Campaign"
-    %option{value: "Campaign 1"}="Campaign 1"
-    %option{value: "My New Campaign"}="test"
-  Creatures
+    - current_user.campaigns.each do |c|
+      %option{:value => c.id}= c.name
 
-#encounterCreaturesTable.table
+#encounter-creatures-table.table
   .tr
     #monster1.monster-row
       .name
