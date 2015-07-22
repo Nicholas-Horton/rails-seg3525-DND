@@ -1,125 +1,96 @@
-#attributes{
-  font-size: smaller;
-  legend {
-    font-size: medium;
-    font-weight: bold;
+#player-character {
+  fieldset legend {
+      font-size: medium;
+      font-weight: bold;
   }
 
-  .attribute-wrapper {
+  #attributes {
+    font-size: smaller;
+    .attribute-wrapper {
+      display: table;
+      table-layout: fixed;
+      width: 100%;
+      height: 100%;
+
+      .attribute {
+        display: table-cell;
+        vertical-align: top;
+        height: 200px;
+        border: 1px solid #111111;
+
+        .text-entry {
+          width: 100px;
+        }
+
+        .ability_score {
+          width: 30px;
+        }
+
+        .modifier {
+          width: 25px;
+          border: 2px solid #99CCFF;
+          border-radius: 5px;
+          float: right;
+        }
+      }
+    }
+  }
+
+  #attack-spell-wrapper {
+    font-size: smaller;
     display: table;
     table-layout: fixed;
-    width:100%;
-    height:100%;
-  }
+    width: 97%;
+    box-sizing: border-box;
+    overflow: auto;
 
-  .attribute{
-    display: table-cell;
-    vertical-align: top;
-    vertical-align: top;
-    height: 200px;
-    border: 1px solid #111111;
-    .text-entry{
-      width: 100px;
-    }
+    .attacks {
+      width: 100%;
+      height: 100%;
 
-    .ability_score {
-      width: 30px;
-    }
+      table {
+        border-collapse: collapse;
+        th {
+          font-size: smaller;
+          color: #666666;
+        }
+        td, th {
+          padding: 0 10px 0 10px;
+        }
+        td {
+          text-align: center;
+        }
+        .attack-damage {
+          width: 100px
+        }
+        .attack-bonus {
+          width: 25px;
+          border: 2px solid #99CCFF;
+          border-radius: 5px;
+        }
 
-    .modifier {
-      width: 25px;
-      border: 2px solid #99CCFF;
-      border-radius: 5px;
-      float: right;
-    }
-  }
-}
+        tr:hover {
+          background-color: #999999;
+        }
 
-#attack-spell-wrapper {
-  font-size: smaller;
-  display: table;
-  table-layout: fixed;
-  width: 97%;
-  box-sizing: border-box;
-  overflow: auto;
-
-  .attacks {
-    display: table-cell;
-    float: left;
-    width: 100%;
-    height: 100%;
-    legend {
-      font-size: medium;
-      font-weight: bold;
-    }
-
-    table {
-      border-collapse: collapse;
-      th {
-        font-size: smaller;
-        color: #666666;
-      }
-      td, th {
-        padding: 0 10px 0 10px;
-      }
-      td {
-        text-align: center;
-      }
-      .attack-damage {
-        width: 100px
-      }
-      .attack-bonus {
-        width: 25px;
-        border: 2px solid #99CCFF;
-        border-radius: 5px;
-      }
-
-      tr:hover td {
-        background-color: #999999;
-      }
-
-      .attack-row:hover:after {
-        background: #333;
-        background: rgba(0, 0, 0, .8);
-        border-radius: 5px;
-        color: #fff;
-        content: attr(description);
-        padding: 5px 15px;
-        position: absolute;
-        z-index: 999;
-        width: 500px;
+        .attack-row:hover:after {
+          background: #333;
+          background: rgba(0, 0, 0, .8);
+          border-radius: 5px;
+          color: #fff;
+          content: attr(description);
+          padding: 5px 15px;
+          position: absolute;
+          z-index: 999;
+          width: 500px;
+        }
       }
     }
-  }
 
-  .spells {
-    display: table-cell;
-    float: left;
-    width: 100%;
-    height: 100%;
-    legend {
-      font-size: medium;
-      font-weight: bold;
-    }
+    .spells {
+      width: 100%;
+      height: 100%;
 
-    //table {
-    //  border-collapse: collapse;
-    //  th {
-    //    font-size: smaller;
-    //    color: #666666;
-    //  }
-    //  td, th {
-    //    padding: 0 10px 0 10px;
-    //  }
-    //  td {
-    //    text-align: center;
-    //  }
-    //
-    //  tr:hover td {
-    //    background-color: #999999;
-    //  }
-    //}
-    .spell-row {
       .spell {
         display: inline-block;
         vertical-align: top;
@@ -131,26 +102,19 @@
         }
       }
     }
-  }
-}
 
-
-.feats{
-  font-size: smaller;
-  legend {
-    font-size: medium;
-    font-weight: bold;
   }
 
-  table {
-    border-collapse: collapse;
-    th {
-      font-size: smaller;
-      color: #666666;
-    }
+  .feats{
+    font-size: smaller;
+    table {
+      td, th {
+        padding: 0 10px 0 10px;
+      }
 
-    td, th {
-      padding: 0 10px 0 10px;
+      th {
+        color: #666666;
+      }
     }
   }
 }
@@ -189,9 +153,3 @@
     background-color: rgba(102, 0, 9, 0.38);
   }
 }
-
-
-
-
-
-
