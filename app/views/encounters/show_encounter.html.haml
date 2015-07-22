@@ -14,7 +14,7 @@
 
 #encounterCreaturesTable.table
   .tr
-    #monster1.td
+    #monster1.monster-row
       .name
         %input{name: "encounter-name", value: "Goblin 1", type: "text/plain", size: 12}
       .attribute-set-wrapper
@@ -33,6 +33,7 @@
           %div.attribute
             %label Initiative:
             %input.ability_score{type:'number', name:'hp', min:'0', max:'4', value:'4'}
+      %br
       %div#fieldset-wrapper
         %fieldset.attacks
           %legend
@@ -77,4 +78,4 @@
           %legend
             Other
           Notes:
-          %textarea{cols: "1", rows: "5"}
+          %textarea{cols: "30", rows: "5"}
