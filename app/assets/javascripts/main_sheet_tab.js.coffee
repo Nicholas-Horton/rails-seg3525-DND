@@ -7,8 +7,8 @@ $(document).ready ->
     toggleRemoveSpells()
   rearrangeSpells()
   $('.spells .spell + .delete').hover toggleDeleteWarning
-  addAddSpellButtons()
-
+  if $('input#page-info').val() == 'player_character'
+    addAddSpellButtons()
 
 calculateAttributes = () ->
   strength = $("#strength").val()
