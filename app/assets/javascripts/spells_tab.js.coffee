@@ -27,7 +27,7 @@ filter = () ->
   concentration = $('#concentration').val()
   source = $('#source').val()
 
-  matchingRows = $("tr.spell-row")
+  matchingRows = $("#spells-feats-tabs #spells-tab #spell-table .spell-row")
   matchingRows = matchingRows.filter ->
     $(".name",this).text().toLowerCase().indexOf(name) != -1
   matchingRows = matchingRows.filter ->
@@ -47,6 +47,6 @@ filter = () ->
   matchingRows = matchingRows.filter ->
     $(".source",this).text().toLowerCase().indexOf(source) != -1
 
-  tableRows = $("tr.spell-row")
+  tableRows = $("#spells-feats-tabs #spells-tab #spell-table .spell-row")
   tableRows.hide()
   matchingRows.show()
