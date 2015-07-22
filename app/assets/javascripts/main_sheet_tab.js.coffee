@@ -2,6 +2,9 @@ $(document).ready ->
   calculateAttributes()
   $(".ability_score").bind "keyup change", ->
     calculateAttributes()
+  addDeleteSpellButtons()
+  $("#attack-spell-wrapper .spells .remove-button").bind "click", ->
+    toggleRemoveSpells()
 
 
 calculateAttributes = () ->
@@ -41,3 +44,12 @@ calculateAttributes = () ->
     $('#charisma_modifier').val("+" + Math.floor(((charisma - 10)/2)))
   else
     $('#charisma_modifier').val(Math.floor(((charisma - 10)/2)))
+
+addDeleteSpellButtons = () ->
+  $('#attack-spell-wrapper .spells .spell').after("<div class='delete td'><i class='fa fa-minus-circle'></i>Delete</div>")
+
+toggleRemoveSpells = () ->
+  if $('#attack-spell-wrapper .spells .spell + .delete').css('visibility') == 'hidden'
+    $('#attack-spell-wrapper .spells .spell + .delete').css('visibility', 'visible')
+  else
+    $('#attack-spell-wrapper .spells .spell + .delete').css('visibility', 'hidden')

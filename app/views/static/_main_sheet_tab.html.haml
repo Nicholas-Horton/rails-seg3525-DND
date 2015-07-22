@@ -170,6 +170,10 @@
   %fieldset.attacks
     %legend
       My Attacks
+      %a.add-button{href:'#'}
+        %i.fa.fa-plus-circle.fa-2x
+      %a.remove-button{href:'#'}
+        %i.fa.fa-minus-circle.fa-2x
 
     %table
       %tr
@@ -190,61 +194,102 @@
         %td.delete
           %i.fa.fa-minus-circle
           Delete
-    %a.add-button{href:'#'}
-      %i.fa.fa-plus-circle.fa-2x
+
 
   %fieldset.spells
     %legend
       My Spells
-
-    %table
-      %tr
-        %th Name
-        %th Level
-        %th Casting Time
-        %th Components
-        %th Concentration
-        %th Ritual
-        %th &nbsp
-      %tr.spell-row.spell{spell_id: '1'}
-        %td
+      %a.add-button{href:'#'}
+        %i.fa.fa-plus-circle.fa-2x
+      %a.remove-button{href:'#'}
+        %i.fa.fa-minus-circle.fa-2x
+    .table
+      .spell-row.tr
+        .spell.td{spell_id: '1'}
           Acid Splash
-        %td
-          Cantrip
-        %td
-          1 action
-        %td
-          VS
-        %td
-          No
-        %td
-          No
-        %td.delete
-          %i.fa.fa-minus-circle
-          Delete
-      %tr.spell-row.spell{spell_id: '2'}
-        %td
+      .spell-row.tr
+        .spell.td{spell_id: '2'}
           Detect Magic
-        %td
-          Cantrip
-        %td
-          1 action
-        %td
-          VS
-        %td
-          No
-        %td
-          No
-        %td.delete
-          %i.fa.fa-minus-circle
-          Delete
+      .spell-row.tr
+        .spell.td{spell_id: '1'}
+          Acid Splash
+      .spell-row.tr
+        .spell.td{spell_id: '2'}
+          Detect Magic
+      .spell-row.tr
+        .spell.td{spell_id: '1'}
+          Acid Splash
+      .spell-row.tr
+        .spell.td{spell_id: '2'}
+          Detect Magic
+      .spell-row.tr
+        .spell.td{spell_id: '1'}
+          Acid Splash
+      .spell-row.tr
+        .spell.td{spell_id: '2'}
+          Detect Magic
+      .spell-row.tr
+        .spell.td{spell_id: '1'}
+          Acid Splash
+      .spell-row.tr
+        .spell.td{spell_id: '2'}
+          Detect Magic
+      .spell-row.tr
+        .spell.td{spell_id: '1'}
+          Acid Splash
+      .spell-row.tr
+        .spell.td{spell_id: '2'}
+          Detect Magic
 
-    %a.add-button{href:'#'}
-      %i.fa.fa-plus-circle.fa-2x
+    -#%table
+    -#  %tr
+    -#    %th Name
+    -#    %th Level
+    -#    %th Casting Time
+    -#    %th Components
+    -#    %th Concentration
+    -#    %th Ritual
+    -#    %th &nbsp
+    -#  %tr.spell-row.spell{spell_id: '1'}
+    -#    %td
+    -#      Acid Splash
+    -#    %td
+    -#      Cantrip
+    -#    %td
+    -#      1 action
+    -#    %td
+    -#      VS
+    -#    %td
+    -#      No
+    -#    %td
+    -#      No
+    -#    %td.delete
+    -#      %i.fa.fa-minus-circle
+    -#      Delete
+    -#  %tr.spell-row.spell{spell_id: '2'}
+    -#    %td
+    -#      Detect Magic
+    -#    %td
+    -#      Cantrip
+    -#    %td
+    -#      1 action
+    -#    %td
+    -#      VS
+    -#    %td
+    -#      No
+    -#    %td
+    -#      No
+    -#    %td.delete
+    -#      %i.fa.fa-minus-circle
+    -#      Delete
 
 %fieldset.feats
   %legend
     My Feats
+    %a.add-button{href:'#'}
+      %i.fa.fa-plus-circle.fa-2x
+    %a.remove-button{href:'#'}
+      %i.fa.fa-minus-circle.fa-2x
 
   %table
     %tr
@@ -257,6 +302,3 @@
       %td.delete
         %i.fa.fa-minus-circle
         Delete
-
-  %a.add-button{href:'#'}
-    %i.fa.fa-plus-circle.fa-2x
