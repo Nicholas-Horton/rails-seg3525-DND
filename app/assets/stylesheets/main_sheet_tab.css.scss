@@ -158,7 +158,8 @@
 .add-button, .add-button:visited, .remove-button, .remove-button:visited {
   color: #080;
   margin: 0 0 0 8px;
-  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
 
   &:hover {
     color: #070;
