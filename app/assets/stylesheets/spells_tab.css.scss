@@ -2,6 +2,15 @@
   font-size: small;
   table {
     width:100%;
+    border-collapse: collapse;
+
+    .add-button-header {
+      width: 32px;
+    }
+
+    .spell-row:hover {
+      background-color: #999
+    }
   }
   select{
     width: 100%;

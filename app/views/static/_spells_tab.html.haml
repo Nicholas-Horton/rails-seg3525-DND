@@ -82,7 +82,7 @@
       %td
         %a#clear-all-button{href:'#'} Clear All
 
-    %table.sortable
+    %table#spell-table.sortable
       %tr
         %th Name
         %th Level
@@ -94,8 +94,8 @@
         %th Source
 
       - @spells.each do |spell|
-        %tr.spell-row.spell{spell_id:spell.id}
-          %td.name= spell.name
+        %tr.spell-row
+          %td.name.spell{spell_id:spell.id}= spell.name
           %td.level= spell.level
           %td.school= spell.school
           %td.ritual= spell.ritual

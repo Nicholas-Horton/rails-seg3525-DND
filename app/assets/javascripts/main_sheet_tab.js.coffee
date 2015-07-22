@@ -7,6 +7,7 @@ $(document).ready ->
     toggleRemoveSpells()
   rearrangeSpells()
   $('.spells .spell + .delete').hover toggleDeleteWarning
+  addAddSpellButtons()
 
 
 calculateAttributes = () ->
@@ -69,3 +70,8 @@ rearrangeSpells = () ->
 
 toggleDeleteWarning = (e) ->
   $(e.target).parent().toggleClass('delete-warning')
+
+addAddSpellButtons = () ->
+  $('#spells-feats-tabs #spells-tab #spell-table tr:first').prepend("<th class='add-button-header'></th>")
+  spells = $('#spells-feats-tabs #spells-tab #spell-table .spell-row')
+  spells.prepend("<td class='add-button'><i class='fa fa-plus-circle fa-2x'></i></td>")
