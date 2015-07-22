@@ -3,6 +3,7 @@ $(document).ready ->
   $('.spell').bind 'mousemove', moveSpellTooltip
 
 showSpellTooltip = (e) ->
+  hideAllSpellTooltips()
   id = $(e.target).closest('.spell').attr('spell_id')
   if $("#spell-tooltip-#{id}").length == 0
     $.ajax
@@ -18,6 +19,9 @@ showSpellTooltip = (e) ->
         fixSpellDetailsHeights(id)
         moveSpellTooltip(e)
   $("#spell-tooltip-#{id}").show()
+
+hideAllSpellTooltips = () ->
+  $("[id^=spell-tooltip-]").hide()
 
 hideSpellTooltip = (e) ->
   id = $(e.target).closest('.spell').attr('spell_id')
