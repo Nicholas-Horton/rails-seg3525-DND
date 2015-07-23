@@ -24,8 +24,7 @@ hideAllSpellTooltips = () ->
   $("[id^=spell-tooltip-]").hide()
 
 hideSpellTooltip = (e) ->
-  id = $(e.target).closest('.spell').attr('spell_id')
-  $("#spell-tooltip-#{id}").hide()
+  hideAllSpellTooltips()
 
 moveSpellTooltip = (e) ->
   id = $(e.target).closest('.spell').attr('spell_id')
