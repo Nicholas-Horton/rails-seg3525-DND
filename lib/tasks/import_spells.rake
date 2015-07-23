@@ -7,7 +7,8 @@ task import_spells: [:environment] do
   data = JSON.parse(file)
   data.each do |spell|
     name = spell['name']
-    description = spell['desc'] + spell['higher_level']
+    description = spell['desc']
+    description += spell['higher_level'] if spell['higher_level']
     spell_class = spell['class']
     level = if spell['level'] == 'Cantrip' then '0' else spell['level'][0] end
     school = spell['school']
