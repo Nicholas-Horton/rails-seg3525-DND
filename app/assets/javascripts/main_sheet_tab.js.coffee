@@ -96,7 +96,7 @@ addSpell = (e) ->
   spellRow = $(e.target).parent().parent()
   spellName = $('.name', spellRow).text()
   spellId = $('.name', spellRow).attr('spell_id')
-  if !$('#attack-spell-wrapper .spells .spell').text().contains(spellName)
+  if $('#attack-spell-wrapper .spells .spell').text().indexOf(spellName) == -1
     spell = "<div class='spell-block'><div class='spell' spell_id='#{spellId}'>#{spellName}</div><div class='delete'><i class='fa fa-minus-circle'></i>Delete</div></div>"
     $('#attack-spell-wrapper .spells').append(spell)
     rearrangeSpells()
