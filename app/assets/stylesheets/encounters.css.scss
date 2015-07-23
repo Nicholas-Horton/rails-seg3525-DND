@@ -33,14 +33,14 @@
 
 
 #encounter-creatures-table{
+  border-top: 2px solid #BBBBBB;
+  border-left: 2px solid #BBBBBB;
+  background-color: #DDD;
   position: relative;
   display: table;
   width: 100%;
 
   .monster-row {
-    background-color: #DDD;
-    border-top: 2px solid #BBBBBB;
-    border-left: 2px solid #BBBBBB;
     border-bottom: 4px solid #AAAAAA;
     border-right: 4px solid #AAAAAA;
     padding: 10px;
