@@ -1,0 +1,66 @@
+#other-info-tab
+  .top-row-wrapper
+    %fieldset.basic-info-fieldset#basics
+      %legend
+        Basic Information
+      .basic-info-wrapper
+        .basic-info-cell
+          Race:
+          %input#pc-race{type:'text'}
+          %br
+          Class:
+          %input#pc-class{type:'text'}
+          %br
+          XP:
+          %input#pc-xp{type:'number'}
+          %br
+          Alignment:
+          %input#pc-alignment{type:'text'}
+          %br
+          Age:
+          %input#pc-age{type:'number'}
+        .basic-info-cell
+          Skin Colour:
+          %input#skin{type:'text'}
+          %br
+          Eye Colour:
+          %input#eye{type:'text'}
+          %br
+          Hair Colour:
+          %input#hair{type:'text'}
+          %br
+          Height:
+          %input#height{type:'text'}
+          %br
+          Weight:
+          %input#pc-weight{type:'text'}
+    %fieldset.background-fieldset#background
+      %legend
+        Background
+      .background-cell
+        %textarea#pc-background{type:'text'}
+  %fieldset#inventory
+    %legend
+      Inventory
+    .currency-wrapper
+      .currency-cell
+        cp:
+        %input#cp{type:'number'}
+      .currency-cell
+        sp:
+        %input#sp{type:'number'}
+      .currency-cell
+        gp:
+        %input#gp{type:'number'}
+      .currency-cell
+        ep:
+        %input#ep{type:'number'}
+      .currency-cell
+        pp:
+        %input#pp{type:'number'}
+    .main-inventory-cell
+      %textarea#inventory{type:'text'}
+
+
+
+
