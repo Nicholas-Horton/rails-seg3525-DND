@@ -11,7 +11,7 @@
       =link_to show_campaign_campaign_path(c), {class: 'tr'} do
         .td= c.name
         .td= c.encounters.length
-        .td= c.updated_at
+        .td= c.updated_at.strftime('%F %T')
 
   = link_to  new_campaign_campaigns_path do
     .button-table-background
