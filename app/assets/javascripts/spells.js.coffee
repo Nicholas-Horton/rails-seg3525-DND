@@ -68,6 +68,9 @@ fixSpellDetailsHeights = (id) ->
   components = $('.spell-components', tooltip)
   duration = $('.spell-duration', tooltip)
 
+  while tooltip.height() > 500 && tooltip.height() > tooltip.width()
+    tooltip.css('width', tooltip.width() + 100)
+
   castingTime.height(Math.max(castingTime.height(), range.height()))
   range.height(Math.max(castingTime.height(), range.height()))
   components.height(Math.max(components.height(), duration.height()))
