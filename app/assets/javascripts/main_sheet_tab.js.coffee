@@ -4,13 +4,16 @@ $(document).ready ->
     calculateAttributes()
   addDeleteSpellButtons()
   $("#attack-spell-wrapper .spells .add-button").bind "click", ->
-    addSpell()
+    openSpellTab()
   $("#attack-spell-wrapper .spells .remove-button").bind "click", ->
     toggleRemoveSpells()
   rearrangeSpells()
   $('.spells .spell + .delete').hover addDeleteWarning, removeDeleteWarning
   $('.spells .spell + .delete').bind 'click', (e) ->
     removeSpell(e)
+#  Add buttons not yet created, therefore event is on body
+  $('body').on 'click', '#spells-feats-tabs #spells-tab #spell-table .spell-row .add-button', (e) ->
+    addSpell(e)
   if $('input#page-info').val() == 'player_character'
     addAddSpellButtons()
 
@@ -55,7 +58,7 @@ calculateAttributes = () ->
 addDeleteSpellButtons = () ->
   $('#attack-spell-wrapper .spells .spell').after("<div class='delete'><i class='fa fa-minus-circle'></i>Delete</div>")
 
-addSpell = () ->
+openSpellTab = () ->
   $('#spells-feats-button').click()
   $('.spells-feats-tab-label').first().click()
 
@@ -87,6 +90,21 @@ removeDeleteWarning = (e) ->
 removeSpell = (e) ->
   $(e.target).parent().remove()
   rearrangeSpells()
+
+addSpell = (e) ->
+  spellRow = $(e.target).parent().parent()
+  spellName = $('.name', spellRow).text()
+  spellId = $('.name', spellRow).attr('spell_id')
+  if !$('#attack-spell-wrapper .spells .spell').text().contains(spellName)
+    spell = "<div class='spell-block'><div class='spell' spell_id='#{spellId}'>#{spellName}</div><div class='delete'><i class='fa fa-minus-circle'></i>Delete</div></div>"
+    $('#attack-spell-wrapper .spells').append(spell)
+    rearrangeSpells()
+    showSpellAddMessage(spellRow, 'Spell successfully added.')
+  else
+    showSpellAddMessage(spellRow, 'Spell is already on spell list!')
+
+showSpellAddMessage = (row, message) ->
+#  todo: add message
 
 addAddSpellButtons = () ->
   $('#spells-feats-tabs #spells-tab #spell-table tr:first').prepend("<th class='add-button-header'></th>")

@@ -1,6 +1,8 @@
 $(document).ready ->
-  $('.spell').hover showSpellTooltip, hideSpellTooltip
-  $('.spell').bind 'mousemove', moveSpellTooltip
+#  Spells might not yet exist
+  $('body').on 'mouseenter', '.spell', showSpellTooltip
+  $('body').on 'mouseleave', '.spell', hideSpellTooltip
+  $('body').on 'mousemove', '.spell', moveSpellTooltip
 
 showSpellTooltip = (e) ->
   hideAllSpellTooltips()
