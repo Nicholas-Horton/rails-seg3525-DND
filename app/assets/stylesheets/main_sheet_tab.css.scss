@@ -3,8 +3,23 @@
       font-size: medium;
       font-weight: bold;
   }
-
+  #battleinfo {
+    width: 17%;
+    float:left;
+    height: 425px;
+    .battlestats-wrapper{
+      display: table;
+      .battlestats-cell{
+        display: table-cell;
+        input{
+          width: 35px;
+          float: right;
+        }
+      }
+    }
+  }
   #attributes {
+   margin-left: 5%;
     font-size: smaller;
     .attribute-wrapper {
       display: table;

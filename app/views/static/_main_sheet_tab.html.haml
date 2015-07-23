@@ -1,25 +1,36 @@
+%fieldset#battleinfo
+  %legend
+    Battle Stats
+  %div.battlestats-wrapper
+    %div.battlestats-cell
+      AC:
+      %input#ac{type:'number'}
+      %br
+      HP:
+      %input#ac{type:'number'}
+      %br
+      Temp. HP:
+      %input#ac{type:'number'}
+      %br
+      Max HP:
+      %input#ac{type:'number'}
+      %br
+      Speed:
+      %input#speed{type:'number'}
+      %br
+      Initiative:
+      %input#initiative{type:'number'}
+      %br
+      Hit Dice:
+      %input#ac{type:'number'}
+      %br
+      Max Dice:
+      %input#ac{type:'number'}
+      %br
+
 %fieldset#attributes
   %legend
     My Attributes
-  -#%div.attribute
-  -#  %label{for:"level"}Level:
-  -#  %input.ability_score{type:'number', id:'level', min:'1', max:'20', value:'1'}
-  -#
-  -#  %br
-  -#  %label{for:"ac"}AC:
-  -#  %input.modifier{type:'text', id:'ac', readonly:'true'}
-  -#
-  -#  %br
-  -#  %label{for:"prof_bonus"}Proficiency Bonus:
-  -#  %input.modifier{type:'text', id:'prof_bonus', readonly:'true'}
-  -#
-  -#  %br
-  -#  %label{for:"race"}Race:
-  -#  %input.text-entry{type:'text', id:'race', maxlength:'50'}
-  -#
-  -#  %br
-  -#  %label{for:"alignment"}Alignment:
-  -#  %input.text-entry{type:'text', id:'alignment', maxlength:'50'}
   %div.attribute-wrapper
     %div.attribute
       Strength:
@@ -68,6 +79,7 @@
       %input{type:'checkbox', id:'constitution_save_proficiency', checked:'true'}
       Saving Throws:
       %input.modifier{type:'text', id:'constitution_save_modifier', readonly:'true', value:'+5'}
+  %div.attribute-wrapper
     %div.attribute
       Intelligence:
       %input#intelligence.ability_score{type:'number', name:'intelligence', min:'1', max:'30', value:'8'}
