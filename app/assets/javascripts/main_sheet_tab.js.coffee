@@ -72,6 +72,10 @@ toggleRemoveSpells = () ->
 rearrangeSpells = () ->
   spells = $('#attack-spell-wrapper .spells .spell').parent()
   spells.detach()
+  spells.sort (a,b) ->
+    nA = $('.spell', a).text()
+    nB = $('.spell', b).text()
+    if nA < nB then -1 else if nA > nB then 1 else 0
   $('#attack-spell-wrapper .spells .spell-column').remove()
   numberPerColumn = Math.ceil(spells.length / 4)
   n = 0
