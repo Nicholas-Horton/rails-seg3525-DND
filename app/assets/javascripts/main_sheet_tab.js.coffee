@@ -3,6 +3,8 @@ $(document).ready ->
   $(".ability_score").bind "keyup change", ->
     calculateAttributes()
   addDeleteSpellButtons()
+  $("#attack-spell-wrapper .spells .add-button").bind "click", ->
+    addSpell()
   $("#attack-spell-wrapper .spells .remove-button").bind "click", ->
     toggleRemoveSpells()
   rearrangeSpells()
@@ -50,6 +52,10 @@ calculateAttributes = () ->
 
 addDeleteSpellButtons = () ->
   $('#attack-spell-wrapper .spells .spell').after("<div class='delete'><i class='fa fa-minus-circle'></i>Delete</div>")
+
+addSpell = () ->
+  $('#spells-feats-button').click()
+  $('.spells-feats-tab-label').first().click()
 
 toggleRemoveSpells = () ->
   if $('#attack-spell-wrapper .spells .spell + .delete').css('visibility') == 'hidden'
