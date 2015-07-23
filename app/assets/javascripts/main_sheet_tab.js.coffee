@@ -16,6 +16,7 @@ $(document).ready ->
     addSpell(e)
   if $('input#page-info').val() == 'player_character'
     addAddSpellButtons()
+    addTempSpells()
 
 calculateAttributes = () ->
   strength = $("#strength").val()
@@ -110,3 +111,15 @@ addAddSpellButtons = () ->
   $('#spells-feats-tabs #spells-tab #spell-table tr:first').prepend("<th class='add-button-header'></th>")
   spells = $('#spells-feats-tabs #spells-tab #spell-table .spell-row')
   spells.prepend("<td class='add-button'><i class='fa fa-plus-circle fa-2x'></i></td>")
+
+#  TODO: remove when implementing player
+addTempSpells = () ->
+  $('#spells-feats-tabs #spells-tab #spell-table .spell-row .add-button i').eq(22).click()
+  $('#spells-feats-tabs #spells-tab #spell-table .spell-row .add-button i').eq(55).click()
+  $('#spells-feats-tabs #spells-tab #spell-table .spell-row .add-button i').eq(88).click()
+  $('#spells-feats-tabs #spells-tab #spell-table .spell-row .add-button i').eq(111).click()
+  $('#spells-feats-tabs #spells-tab #spell-table .spell-row .add-button i').eq(222).click()
+  $('#spells-feats-tabs #spells-tab #spell-table .spell-row .add-button i').eq(333).click()
+  $('#spells-feats-tabs #spells-tab #spell-table .spell-row .add-button i').eq(344).click()
+  $('#spells-feats-tabs #spells-tab #spell-table .spell-row .add-button i').eq(355).click()
+
