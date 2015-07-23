@@ -32,6 +32,10 @@ moveSpellTooltip = (e) ->
   tooltip = $("#spell-tooltip-#{id}")
   tooltip.css('left', e.pageX + 20)
   tooltip.css('top', e.pageY - tooltip.height() + 20)
+  if tooltip.position() && e.pageX + 20 + tooltip.width() > $(window).width()
+    tooltip.css('left', $(window).width() - tooltip.width() - 20)
+    tooltip.css('top', e.pageY - tooltip.height() - 20)
+
 
 fillSpellTooltip = (id, spellInfo) ->
   tooltip = $("#spell-tooltip-#{id}")
