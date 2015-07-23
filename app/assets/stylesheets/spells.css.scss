@@ -53,9 +53,11 @@
 
     .spell-description {
       padding: 8px;
-      overflow-y: auto;
-      height: 200px;
       font-size: 12px;
+
+      p {
+        margin: 0;
+      }
     }
   }
 
