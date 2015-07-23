@@ -61,15 +61,15 @@ fillSpellTooltip = (id, spellInfo) ->
   contents += "<div class='spell-level'>#{l}</div>"
   tooltip.html(contents)
 
+  while tooltip.height() > 500 && tooltip.height() > tooltip.width()
+    tooltip.css('width', tooltip.width() + 100)
+
 fixSpellDetailsHeights = (id) ->
   tooltip = $("#spell-tooltip-#{id}")
   castingTime = $('.spell-casting-time', tooltip)
   range = $('.spell-range', tooltip)
   components = $('.spell-components', tooltip)
   duration = $('.spell-duration', tooltip)
-
-  while tooltip.height() > 500 && tooltip.height() > tooltip.width()
-    tooltip.css('width', tooltip.width() + 100)
 
   castingTime.height(Math.max(castingTime.height(), range.height()))
   range.height(Math.max(castingTime.height(), range.height()))
