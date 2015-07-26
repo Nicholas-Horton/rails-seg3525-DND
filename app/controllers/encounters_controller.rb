@@ -46,7 +46,7 @@ class EncountersController < ApplicationController
 
   def update
     if @encounter.update(encounter_params)
-      redirect_to @encounter, notice: 'Encounter was successfully updated.'
+      redirect_to show_encounter_encounter_path(@encounter), notice: 'Encounter was successfully updated.'
     else
       render :edit
     end

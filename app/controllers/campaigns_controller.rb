@@ -45,7 +45,7 @@ class CampaignsController < ApplicationController
 
   def update
     if @campaign.update(campaign_params)
-      redirect_to @campaign, notice: 'Campaign was successfully updated.'
+      redirect_to show_campaign_campaign_path(@campaign), notice: 'Campaign was successfully updated.'
     else
       render :edit
     end
