@@ -33,7 +33,7 @@ class CampaignsController < ApplicationController
     @campaign.user_id = current_user.id
 
     if @campaign.save
-      redirect_to edit_campaign_campaign_path(@campaign), notice: 'Campaign was successfully created.'
+      redirect_to show_campaign_campaign_path(@campaign), notice: 'Campaign was successfully created.'
     else
       render :new
     end
