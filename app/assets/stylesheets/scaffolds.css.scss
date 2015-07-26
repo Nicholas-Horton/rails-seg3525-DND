@@ -14,6 +14,15 @@ div {
   }
 }
 
+.edit-fieldset{
+  padding: 20px 40px 10px 5px;
+  margin-bottom: 10px;
+  display: inline-block;
+  background-color: #CCCCCC;
+  border: 1px solid #AAAAAA;
+  border-radius: 3px;
+}
+
 #notice, .notice {
   color: green;
 }

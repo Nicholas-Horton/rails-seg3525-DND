@@ -9,10 +9,10 @@
       %ul
         - @campaign.errors.full_messages.each do |msg|
           %li= msg
-
-  .field
-    = f.label :name
-    = f.text_field :name
+  .edit-fieldset
+    .field
+      = f.label :name
+      = f.text_field :name
   .actions
     = f.submit 'Save', {:class=>"button"}
     = link_to 'Back', show_campaign_campaign_path(@campaign), {:class=>"button"}
