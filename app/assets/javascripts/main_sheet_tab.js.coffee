@@ -3,56 +3,51 @@ $(document).ready ->
   $(".ability_score").bind "keyup change", ->
     calculateAttributes()
   addDeleteSpellButtons()
-  $("#attack-spell-wrapper .spells .add-button").bind "click", ->
-    openSpellTab()
-  $("#attack-spell-wrapper .spells .remove-button").bind "click", ->
-    toggleRemoveSpells()
-  rearrangeSpells()
-  $('.spells .spell + .delete').hover addDeleteWarning, removeDeleteWarning
-  $('.spells .spell + .delete').bind 'click', (e) ->
-    removeSpell(e)
-#  Add buttons not yet created, therefore event is on body
-  $('body').on 'click', '#spells-feats-tabs #spells-tab #spell-table .spell-row .add-button', (e) ->
-    addSpell(e)
+  $('#attack-spell-wrapper .spells .add-button').bind 'click', openSpellTab
+  $('#attack-spell-wrapper .spells .remove-button').bind 'click', toggleRemoveSpells
+  $('body').on 'mouseenter', '.spells .spell + .delete', addDeleteWarning
+  $('body').on 'mouseleave', '.spells .spell + .delete', removeDeleteWarning
+  $('body').on 'click', '.spells .spell + .delete', removeSpell
+  $('body').on 'click', '#spells-feats-tabs #spells-tab #spell-table .spell-row .add-button', addSpell
   if $('input#page-info').val() == 'player_character'
     addAddSpellButtons()
     addTempSpells()
 
 calculateAttributes = () ->
-  strength = $("#strength").val()
-  dexterity = $("#dexterity").val()
-  constitution = $("#constitution").val()
-  intelligence = $("#intelligence").val()
-  wisdom = $("#wisdom").val()
-  charisma = $("#charisma").val()
+  strength = $('#strength').val()
+  dexterity = $('#dexterity').val()
+  constitution = $('#constitution').val()
+  intelligence = $('#intelligence').val()
+  wisdom = $('#wisdom').val()
+  charisma = $('#charisma').val()
 
   if (strength >= 10)
-    $('#strength_modifier').val("+" + Math.floor(((strength - 10)/2)))
+    $('#strength_modifier').val('+' + Math.floor(((strength - 10)/2)))
   else
     $('#strength_modifier').val(Math.floor(((strength - 10)/2)))
 
   if (dexterity >= 10)
-    $('#dexterity_modifier').val("+" + Math.floor(((dexterity - 10)/2)))
+    $('#dexterity_modifier').val('+' + Math.floor(((dexterity - 10)/2)))
   else
     $('#dexterity_modifier').val(Math.floor(((dexterity - 10)/2)))
 
   if (constitution >= 10)
-    $('#constitution_modifier').val("+" + Math.floor(((constitution - 10)/2)))
+    $('#constitution_modifier').val('+' + Math.floor(((constitution - 10)/2)))
   else
     $('#constitution_modifier').val(Math.floor(((constitution - 10)/2)))
 
   if (intelligence >= 10)
-    $('#intelligence_modifier').val("+" + Math.floor(((intelligence - 10)/2)))
+    $('#intelligence_modifier').val('+' + Math.floor(((intelligence - 10)/2)))
   else
     $('#intelligence_modifier').val(Math.floor(((intelligence - 10)/2)))
 
   if (wisdom >= 10)
-    $('#wisdom_modifier').val("+" + Math.floor(((wisdom - 10)/2)))
+    $('#wisdom_modifier').val('+' + Math.floor(((wisdom - 10)/2)))
   else
     $('#wisdom_modifier').val(Math.floor(((wisdom - 10)/2)))
 
   if (charisma >= 10)
-    $('#charisma_modifier').val("+" + Math.floor(((charisma - 10)/2)))
+    $('#charisma_modifier').val('+' + Math.floor(((charisma - 10)/2)))
   else
     $('#charisma_modifier').val(Math.floor(((charisma - 10)/2)))
 
