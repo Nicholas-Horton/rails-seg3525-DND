@@ -11,7 +11,7 @@
       %option{:value => c.id}= c.name
 
 #encounter-creatures-table.table
-  .add-monster-button
+  #add-monster-button
     %i.fa.fa-plus-circle.fa-2x
   .tr
     #monster1.monster-row
@@ -145,3 +145,6 @@
             Other
           Notes:
           %textarea{cols: "30", rows: "5"}
+
+
+= render 'static/creature_search'
