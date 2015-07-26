@@ -4,29 +4,47 @@
   %div.battlestats-wrapper
     %div.battlestats-cell
       AC:
-      %input#ac{type:'number'}
       %br
-      HP:
-      %input#ac{type:'number'}
-      %br
-      Temp. HP:
-      %input#ac{type:'number'}
-      %br
-      Max HP:
-      %input#ac{type:'number'}
-      %br
+      %input#ac{type:'number', min:'0', value:'18'}
+    %div.battlestats-cell
       Speed:
-      %input#speed{type:'number'}
       %br
+      %input#speed{type:'number', min:'0', value: '35'}
+    %div.battlestats-cell
       Initiative:
-      %input#initiative{type:'number'}
       %br
+      %input#initiative{type:'number', min: '0', value:'3'}
+  %div.battlestats-section2-wrapper
+    %div.battlestats-section2-top-cell
+      Max Health:
+      %input#maxHP{type:'number', value: '36'}
+      %br
+    %dive.battlestats-section2-bottom-cell
+      Current Health:
+      %br
+      %input#currentHP{type:'number', value:'31'}
+      %br
+      Temporary Health:
+      %br
+      %input#tempHP{type:'number', value: '0'}
+
+  %div.battlestats-section3-wrapper
+    %div.battlestats3-cell
       Hit Dice:
-      %input#ac{type:'number'}
+      %br
+      %input#hitdice{type:'number', value: '2'}
       %br
       Max Dice:
-      %input#ac{type:'number'}
+      %input#maxdice{type:'number', value: '2'}
+    %div.battlestats3-cell
+      Successful:
       %br
+      %input#suceess{type:'number', value: '2'}
+      %br
+      Failed:
+      %br
+      %input#fail{type:'number', value: '2'}
+
 
 %fieldset#attributes
   %legend
