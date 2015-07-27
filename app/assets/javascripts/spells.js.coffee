@@ -32,7 +32,7 @@ moveSpellTooltip = (e) ->
     tooltip.show()
     fixSpellDetailsHeights(id)
   tooltip.css('left', e.pageX + 20)
-  tooltip.css('top', e.pageY - tooltip.height() + 20)
+  tooltip.css('top', Math.max((e.pageY - tooltip.height() + 20), 0))
   if tooltip.position() && e.pageX + 20 + tooltip.width() > $(window).width()
     tooltip.css('left', $(window).width() - tooltip.width() - 20)
     tooltip.css('top', e.pageY - tooltip.height() - 20)
