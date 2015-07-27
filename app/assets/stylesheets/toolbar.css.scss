@@ -8,12 +8,13 @@
   background-color: #BBBBBB;
   z-index: 50;
 
-  a {
+  #spells-feats-button, #dice-roller-button {
     height: 40px;
     line-height: 40px;
     padding: 10px 20px;
     display: inline-block;
     text-decoration: none;
+    cursor: pointer;
 
     &:hover {
       background-color: #999999;
