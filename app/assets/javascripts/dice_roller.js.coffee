@@ -8,8 +8,11 @@ $(document).ready ->
   $('#dice-roller input').bind 'keyup', (e) ->
     $(this).removeClass('invalid')
     $('#error-message').html('')
+  $('#dice-roller-content td:nth-child(2)').bind 'click', rollDie
 
-
+rollDie = (e) ->
+  d = $(e.target).text().trim()
+  submitDiceRoll(d)
 
 rollDice = () ->
   formula = ""
