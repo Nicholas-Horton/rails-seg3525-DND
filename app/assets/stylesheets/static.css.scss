@@ -26,6 +26,10 @@ body{
     max-width: 1200px;
     margin: auto;
 
+    .logo-image{
+      height: $header-height;
+    }
+
     .headerText{
       float: left;
       padding-left: 20px;
@@ -145,4 +149,15 @@ a, a:visited {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
+
+input {
+  outline: none;
+  border: 1px solid #BBB;
+  transition: box-shadow 0.3s, border 0.3s;
+
+  &:focus {
+    border: 1px solid #FA0;
+    box-shadow: 0 0 5px 1px #FA0;
+  }
 }

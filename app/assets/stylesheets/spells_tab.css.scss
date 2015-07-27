@@ -8,6 +8,14 @@
       width: 32px;
     }
 
+    tr:nth-child(even) {
+      background-color: #DDDDDD;
+    }
+
+    tr:nth-child(odd) {
+      background-color: #EEEEEE;
+    }
+
     .spell-row:hover {
       background-color: #999
     }
