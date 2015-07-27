@@ -42,14 +42,15 @@
   .monster-row {
     border-bottom: 4px solid #AAAAAA;
     border-right: 4px solid #AAAAAA;
-    padding: 10px;
+    padding: 10px 10px 30px 10px;
     white-space: nowrap;
 
     margin-bottom: 10px;
 
     .name{
-    padding-top: 10px;
-    vertical-align: middle;
+    padding-top: 25px;
+    padding-left: 5px;
+    vertical-align: top;
     display: inline-block;
 
     input{
@@ -62,24 +63,70 @@
      font-size: large;
     }
   }
+    .attributes{
+      display: inline-block;
 
-    .attribute-set-wrapper {
-     padding-top: 10px;
-     display: inline-block;
-     vertical-align: middle;
-     .attribute-couple {
-       display: table;
-       .attribute {
-         display: table-row;
-         label {
-           display: table-cell;
-         }
-         .ability-score {
-           display: table-cell;
-         }
-       }
-     }
+      .health-info-wrapper {
+        height: 100%;
+        display: inline-block;
+        background-color: #FAFAFA;
+        border: 2px outset #444444;
+        border-radius: 5px;
+        padding: 4px;
+        hr {
+          margin: 5px 0 5px 0;
+        }
+        .max-HP-label{
+          color: #444444;
+          font-size: smaller;
+        }
+        .max-HP{
+          float: right;
+          margin-left: 10px;
+          width: 40px;
+          border: none;
+          background: none;
+          font-size: smaller;
+          color: #666666;
+        }
+        .current-HP{
+          float: right;
+          margin-left: 10px;
+          width: 40px;
+          border: none;
+          background: none;
+          font-size: smaller;
+          color: #666666;
+        }
+      }
+
+      .attribute-set-wrapper{
+        display: inline-block;
+        padding: 4px;
+        .attribute{
+          margin-top: 3px;
+          margin-bottom: 3px;
+          display: block;
+          background-color: #FAFAFA;
+          border: 2px outset #444444;
+          border-radius: 5px;
+          padding: 3px;
+          width: 64px;
+          color: #444444;
+          label{
+            font-size: smaller;
+          }
+          input{
+            border: none;
+            background: none;
+            width: 38px;
+            font-size: smaller;
+            text-align: right;
+          }
+        }
+      }
     }
+
 
     #fieldset-wrapper{
      height: 60%;

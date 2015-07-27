@@ -18,23 +18,21 @@
   .tr
     #monster1.monster-row
       .name
-        %input{name: "encounter-name", value: "Goblin 1", type: "text/plain", size: 12}
-      .attribute-set-wrapper
-        .attribute-couple
-          %div.attribute
-            %label HP:
-            %input.ability_score{type:'number', name:'hp', min:'0', max:'4', value:'4'}
-          %div.attribute
-            %label Max HP:
-            %input.ability_score{type:'number', name:'hp', min:'0', max:'4', value:'4'}
-      .attribute-set-wrapper
-        .attribute-couple
+        %input{name: "encounter-name", value: "Grum - (Goblin 1)", type: "text/plain", size: 12}
+      .attributes
+        .health-info-wrapper
+          %label.max-HP-label HP:
+          %input.current-HP{type:'number', name:'hp', min:'0', max:'999', value:'30'}
+          %hr
+          %label.max-HP-label Max HP:
+          %input.max-HP{type:'number', name:'hp', min:'0', max:'999', value:'30'}
+        .attribute-set-wrapper
           %div.attribute
             %label AC:
-            %input.ability_score{type:'number', name:'hp', min:'0', max:'4', value:'4'}
+            %input{type:'number', name:'hp', min:'0', max:'99', value:'12'}
           %div.attribute
-            %label Initiative:
-            %input.ability_score{type:'number', name:'hp', min:'0', max:'4', value:'4'}
+            %label Init:
+            %input{type:'number', name:'hp', min:'0', max:'99', value:'6'}
       %br
       %div#fieldset-wrapper
         %fieldset.attacks
