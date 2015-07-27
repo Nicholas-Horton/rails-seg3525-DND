@@ -30,6 +30,7 @@
     display: none;
     overflow: hidden;
     width: calc(100% - 50px);
+    min-width: 870px;
     font-size: 17px;
     line-height: 25px;
     padding: 0 25px 10px 25px;
@@ -49,24 +50,38 @@
 }
 
 .char-info{
+  box-sizing: border-box;
+  width: 550px;
   .name{
-    font-size: 26px;
-    font-weight: bold;
+      input{
+        color: #2E2F30;
+        border: none;
+        font-size: 26px;
+        font-weight: bold;
+        background: none;
+        width: 200px;
+      }
   }
   .level{
     font-size: 18px;
+    color: #444444;
+    border: 3px outset #999999;
+    background-color: #FAFAFA;
+    border-radius: 8px;
   }
-  .proficiency{
-    font-size: 16px;
+  .level-value{
+    text-align: right;
+    font-weight: bold;
+    font-size: 20px;
+    width: 40px;
+    height: 25px;
+    border-radius: 5px;
   }
-  #level-value{
-    padding: 2px;
-    width: 30px;
-    border: 1px solid cornflowerblue;
-    border-radius: 3px;
+  .proficiency-value{
+    text-align: center;
   }
   td {
-    padding: 10px;
+    padding: 6px;
     vertical-align: middle;
     text-align: left;
   }
