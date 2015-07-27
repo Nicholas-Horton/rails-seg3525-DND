@@ -55,7 +55,7 @@ removeSpell = (e) ->
   rearrangeSpells()
 
 addSpell = (e) ->
-  spellRow = $(e.target).parent().parent()
+  spellRow = $(e.target).closest('.spell-row')
   spellName = $('.name', spellRow).text()
   spellId = $('.name', spellRow).attr('spell_id')
   if $('#fieldset-wrapper .spells .spell').text().indexOf(spellName) == -1
