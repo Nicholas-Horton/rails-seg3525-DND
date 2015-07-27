@@ -5,7 +5,7 @@
     margin-bottom: 50px;
   }
   .basic-info-fieldset {
-    width: 40%;
+    width: 35%;
     float: left;
     height: 100%;
   }
@@ -13,21 +13,41 @@
     font-size: medium;
     font-weight: bold;
   }
-  .basic-info-wrapper {
-    display: table;
-  }
-  .basic-info-cell {
-    display: table-cell;
-    padding: 0 15px;
-    input {
-      float: right;
-      padding: 0 10px;
+  .basic-info-background {
+    display:table;
+    margin: 5px;
+    background-color: #FAFAFA;
+    border: 2px outset #444444;
+    border-radius: 5px;
+    padding: 3px;
+    text-align: left;
+    width: 95%;
+    height: 90%;
+    color: #444444;
+    .basic-info-wrapper-input {
+      height: 15%;
+      width: 98%;
+      border-bottom: 1px solid;
+      margin-top: 10px;
+      padding-top: 15px;
+      input {
+        border: none;
+        background: none;
+        width: 120px;
+        font-size: 18px;
+        text-align: left;
+      }
     }
-    input[type = text] {
-      width: 100px;
-    }
-    input[type = number] {
-      width: 50px;
+      .basic-info-cell {
+          display: table-cell;
+          width: 300px;
+          margins: 15px;
+        }
+
+    .basic-info-wrapper-label{
+      height: 10%;
+      width: 98%;
+      margin-bottom: 20px;
     }
   }
   .background-fieldset {
