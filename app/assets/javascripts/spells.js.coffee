@@ -17,9 +17,6 @@ showSpellTooltip = (e) ->
         spellInfo = JSON.parse(data)
         $('body').append("<div id='spell-tooltip-#{id}' class='spell-tooltip'></div>")
         fillSpellTooltip(id, spellInfo)
-        $("#spell-tooltip-#{id}").show()
-        fixSpellDetailsHeights(id)
-        moveSpellTooltip(e)
   $("#spell-tooltip-#{id}").show()
 
 hideAllSpellTooltips = () ->
@@ -31,6 +28,9 @@ hideSpellTooltip = (e) ->
 moveSpellTooltip = (e) ->
   id = $(e.target).closest('.spell').attr('spell_id')
   tooltip = $("#spell-tooltip-#{id}")
+  if !tooltip.is(':visible')
+    tooltip.show()
+    fixSpellDetailsHeights(id)
   tooltip.css('left', e.pageX + 20)
   tooltip.css('top', e.pageY - tooltip.height() + 20)
   if tooltip.position() && e.pageX + 20 + tooltip.width() > $(window).width()
