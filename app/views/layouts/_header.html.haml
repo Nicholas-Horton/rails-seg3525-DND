@@ -4,7 +4,7 @@
       =image_tag 'dndtoolslogo.png', class: 'logo-image'
     .headerUserActions
       - if current_user
-        = link_to current_user.email, user_path(current_user)
+        = link_to current_user.email, root_path
         = link_to 'Logout', :logout, method: :post, id: 'logout'
       - else
         = link_to 'Sign up', new_user_path, id: 'sign-up'

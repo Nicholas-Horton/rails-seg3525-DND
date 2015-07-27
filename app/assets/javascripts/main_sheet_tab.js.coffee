@@ -21,35 +21,13 @@ calculateAttributes = () ->
   wisdom = $('#wisdom').val()
   charisma = $('#charisma').val()
 
-  if (strength >= 10)
-    $('#strength-modifier').val('+' + Math.floor(((strength - 10)/2)))
-  else
-    $('#strength-modifier').val(Math.floor(((strength - 10)/2)))
-
-  if (dexterity >= 10)
-    $('#dexterity-modifier').val('+' + Math.floor(((dexterity - 10)/2)))
-  else
-    $('#dexterity-modifier').val(Math.floor(((dexterity - 10)/2)))
-
-  if (constitution >= 10)
-    $('#constitution-modifier').val('+' + Math.floor(((constitution - 10)/2)))
-  else
-    $('#constitution-modifier').val(Math.floor(((constitution - 10)/2)))
-
-  if (intelligence >= 10)
-    $('#intelligence-modifier').val('+' + Math.floor(((intelligence - 10)/2)))
-  else
-    $('#intelligence-modifier').val(Math.floor(((intelligence - 10)/2)))
-
-  if (wisdom >= 10)
-    $('#wisdom-modifier').val('+' + Math.floor(((wisdom - 10)/2)))
-  else
-    $('#wisdom-modifier').val(Math.floor(((wisdom - 10)/2)))
-
-  if (charisma >= 10)
-    $('#charisma-modifier').val('+' + Math.floor(((charisma - 10)/2)))
-  else
-    $('#charisma-modifier').val(Math.floor(((charisma - 10)/2)))
+  for attr in [['strength',strength], ['dexterity', dexterity], ['constitution', constitution], ['intelligence', intelligence], ['wisdom', wisdom], ['charisma', charisma]]
+    if attr[1] < 10
+      $("##{attr[0]}-modifier").val(Math.floor(((attr[1] - 10)/2)))
+    else if attr[1] > 11
+      $("##{attr[0]}-modifier").val('+' + Math.floor(((attr[1] - 10)/2)))
+    else
+      $("##{attr[0]}-modifier").val('0')
 
 addDeleteSpellButtons = () ->
   $('#attack-spell-wrapper .spells .spell').after("<div class='delete'><i class='fa fa-minus-circle'></i>Delete</div>")
