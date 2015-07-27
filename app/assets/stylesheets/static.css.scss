@@ -28,6 +28,11 @@ body{
 
     .logo-image{
       height: $header-height;
+
+      &:hover {
+        -webkit-filter: brightness(80%);
+        filter: brightness(80%);
+      }
     }
 
     .headerText{
