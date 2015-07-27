@@ -1,205 +1,221 @@
-%fieldset#battleinfo
-  %legend
-    Battle Stats
-  %div.battlestats-wrapper
-    %div.battlestats-cell
-      AC:
-      %br
-      %input#ac{type:'number', min:'0', value:'18'}
-    %div.battlestats-cell
-      Speed:
-      %br
-      %input#speed{type:'number', min:'0', value: '35'}
-    %div.battlestats-cell
-      Initiative:
-      %br
-      %input#initiative{type:'number', min: '0', value:'3'}
-  %div.battlestats-section2-wrapper
-    %div.battlestats-section2-top-cell
-      Max Health:
-      %input#maxHP{type:'number', value: '36'}
-      %br
-    %dive.battlestats-section2-bottom-cell
-      Current Health:
-      %br
-      %input#currentHP{type:'number', value:'31'}
-      %br
-      Temporary Health:
-      %br
-      %input#tempHP{type:'number', value: '0'}
+.battle-attributes-wrapper
+  %fieldset#battleinfo
+    %legend
+      Battle Stats
+    %div.battlestats-wrapper
+      %div.battlestats-cell
+        AC:
+        %br
+        %input#ac{type:'number', min:'0', value:'18'}
+      %div.battlestats-cell
+        Speed:
+        %br
+        %input#speed{type:'number', min:'0', value: '35'}
+      %div.battlestats-cell
+        Initiative:
+        %br
+        %input#initiative{type:'number', min: '0', value:'3'}
+    %div.battlestats-section2-wrapper
+      %div.battlestats-section2-top-cell
+        Max Health:
+        %input#maxHP{type:'number', value: '36'}
+        %br
+      %dive.battlestats-section2-bottom-cell
+        Current Health:
+        %br
+        %input#currentHP{type:'number', value:'31'}
+        %br
+        Temporary Health:
+        %br
+        %input#tempHP{type:'number', value: '0'}
 
-  %div.battlestats-section3-wrapper
-    %div.battlestats3-cell
-      Hit Dice:
-      %br
-      %input#hitdice{type:'number', value: '2'}
-      %br
-      Max Dice:
-      %input#maxdice{type:'number', value: '2'}
-    %div.battlestats3-cell
-      Successful:
-      %br
-      %input#suceess{type:'number', value: '2'}
-      %br
-      Failed:
-      %br
-      %input#fail{type:'number', value: '2'}
+    %div.battlestats-section3-wrapper
+      %div.battlestats3-cell
+        Hit Dice:
+        %br
+        %input#hitdice{type:'number', value: '2'}
+        %br
+        Max Dice:
+        %input#maxdice{type:'number', value: '2'}
+      %div.battlestats3-cell
+        Successful:
+        %br
+        %input#suceess{type:'number', value: '2'}
+        %br
+        Failed:
+        %br
+        %input#fail{type:'number', value: '2'}
 
 
-%fieldset#attributes
-  %legend
-    My Attributes
-  %div.attribute-wrapper
-    %div.attribute
-      Strength:
-      %input#strength.ability_score{type:'number', name:'strength', min:'1', max:'30', value:'16'}
-      %input.modifier{type:'text', id:'strength_modifier', readonly:'true'}
+  %fieldset#attributes
+    %legend
+      Attributes
+    %div.attribute-wrapper
+      %div.attribute
+        %div.attribute-box
+          %input#strength-modifier.box-modifier{type:'text', value:'+3'}
+          %hr
+          %input#strength.ability-score{type:'number', value:'18', min:'8', max:'30'}
+          %br
+          Strength
+        %div.skills
+          %input{type:'checkbox', id:'strength_save_proficiency', checked:'true'}
+          Saving Throws
+          %input.modifier{type:'text', id:'strength_save_modifier', readonly:'true', value:'+5'}
 
-      %hr
-      %input{type:'checkbox', id:'strength_save_proficiency', checked:'true'}
-      Saving Throws:
-      %input.modifier{type:'text', id:'strength_save_modifier', readonly:'true', value:'+5'}
+          %br
+          %input{type:'checkbox', id:'athletics_proficiency', checked:'true'}
+          Athletics:
+          %input.modifier{type:'text', id:'athletics_modifier', readonly:'true', value:"+5"}
+      %div.attribute
+        %div.attribute-box
+          %input#dexterity-modifier.box-modifier{type:'text', value:'+3'}
+          %hr
+          %input#dexterity.ability-score{type:'number', value:'12', min:'8', max:'30'}
+          %br
+          Dexterity
+        %div.skills
+          %input{type:'checkbox', id:'dexterity_save_proficiency'}
+          Saving Throws:
+          %input.modifier{type:'text', id:'dexterity_save_modifier', readonly:'true', value:'-1'}
 
-      %br
-      %input{type:'checkbox', id:'athletics_proficiency', checked:'true'}
-      Athletics:
-      %input.modifier{type:'text', id:'athletics_modifier', readonly:'true', value:"+5"}
-    %div.attribute
-      Dexterity:
-      %input#dexterity.ability_score{type:'number', name:'dexterity', min:'1', max:'30', value:'10'}
-      %input.modifier{type:'text', id:'dexterity_modifier', readonly:'true'}
+          %br
+          %input{type:'checkbox', id:'acrobatics_proficiency'}
+          Acrobatics:
+          %input.modifier{type:'text', id:'acrobatics_modifier', readonly:'true', value:'-1'}
 
-      %hr
-      %input{type:'checkbox', id:'dexterity_save_proficiency'}
-      Saving Throws:
-      %input.modifier{type:'text', id:'dexterity_save_modifier', readonly:'true', value:'-1'}
+          %br
+          %input{type:'checkbox', id:'sleight_of_hand_proficiency'}
+          Sleight of hand:
+          %input.modifier{type:'text', id:'sleight_of_hand_modifier', readonly:'true', value:'-1'}
 
-      %br
-      %input{type:'checkbox', id:'acrobatics_proficiency'}
-      Acrobatics:
-      %input.modifier{type:'text', id:'acrobatics_modifier', readonly:'true', value:'-1'}
+          %br
+          %input{type:'checkbox', id:'stealth_proficiency'}
+          Stealth:
+          %input.modifier{type:'text', id:'stealth_modifier', readonly:'true', value:'-1'}
+      %div.attribute
+        %div.attribute-box
+          %input#constitution-modifier.box-modifier{type:'text', value:'+3'}
+          %hr
+          %input#constitution.ability-score{type:'number', value:'16', min:'8', max:'30'}
+          %br
+          Consitution
 
-      %br
-      %input{type:'checkbox', id:'sleight_of_hand_proficiency'}
-      Sleight of hand:
-      %input.modifier{type:'text', id:'sleight_of_hand_modifier', readonly:'true', value:'-1'}
+        %div.skills
+          %input{type:'checkbox', id:'constitution_save_proficiency', checked:'true'}
+          Saving Throws:
+          %input.modifier{type:'text', id:'constitution_save_modifier', readonly:'true', value:'+5'}
+    %div.attribute-wrapper
+      %div.attribute
+        %div.attribute-box
+          %input#intelligence-modifier.box-modifier{type:'text', value:'+3'}
+          %hr
+          %input#intelligence.ability-score{type:'number', value:'8', min:'8', max:'30'}
+          %br
+          Intelligence
+        %div.skills
+          %input{type:'checkbox', id:'intelligence_save_proficiency'}
+          Saving Throws:
+          %input.modifier{type:'text', id:'intelligence_save_modifier', readonly:'true', value:'-1'}
 
-      %br
-      %input{type:'checkbox', id:'stealth_proficiency'}
-      Stealth:
-      %input.modifier{type:'text', id:'stealth_modifier', readonly:'true', value:'-1'}
-    %div.attribute
-      Constitution:
-      %input#constitution.ability_score{type:'number', name:'constitution', min:'1', max:'30', value:'16'}
-      %input.modifier{type:'text', id:'constitution_modifier', readonly:'true'}
+          %br
+          %input{type:'checkbox', id:'arcana_proficiency'}
+          Arcana:
+          %input.modifier{type:'text', id:'arcana_modifier', readonly:'true', value:'-1'}
 
-      %hr
-      %input{type:'checkbox', id:'constitution_save_proficiency', checked:'true'}
-      Saving Throws:
-      %input.modifier{type:'text', id:'constitution_save_modifier', readonly:'true', value:'+5'}
-  %div.attribute-wrapper
-    %div.attribute
-      Intelligence:
-      %input#intelligence.ability_score{type:'number', name:'intelligence', min:'1', max:'30', value:'8'}
-      %input.modifier{type:'text', id:'intelligence_modifier', readonly:'true'}
+          %br
+          %input{type:'checkbox', id:'history_proficiency'}
+          History:
+          %input.modifier{type:'text', id:'history_modifier', readonly:'true', value:'-1'}
 
-      %hr
-      %input{type:'checkbox', id:'intelligence_save_proficiency'}
-      Saving Throws:
-      %input.modifier{type:'text', id:'intelligence_save_modifier', readonly:'true', value:'-1'}
+          %br
+          %input{type:'checkbox', id:'investigation_proficiency'}
+          Investigation:
+          %input.modifier{type:'text', id:'investigation_modifier', readonly:'true', value:'-1'}
 
-      %br
-      %input{type:'checkbox', id:'arcana_proficiency'}
-      Arcana:
-      %input.modifier{type:'text', id:'arcana_modifier', readonly:'true', value:'-1'}
+          %br
+          %input{type:'checkbox', id:'nature_proficiency'}
+          Nature:
+          %input.modifier{type:'text', id:'nature_modifier', readonly:'true', value:'-1'}
 
-      %br
-      %input{type:'checkbox', id:'history_proficiency'}
-      History:
-      %input.modifier{type:'text', id:'history_modifier', readonly:'true', value:'-1'}
+          %br
+          %input{type:'checkbox', id:'religion_proficiency'}
+          Religion:
+          %input.modifier{type:'text', id:'religion_modifier', readonly:'true', value:'-1'}
+      %div.attribute
+        %div.attribute-box
+          %input#wisdom-modifier.box-modifier{type:'text', value:'+3'}
+          %hr
+          %input#wisdom.ability-score{type:'number', value:'12', min:'8', max:'30'}
+          %br
+          Wisdom
 
-      %br
-      %input{type:'checkbox', id:'investigation_proficiency'}
-      Investigation:
-      %input.modifier{type:'text', id:'investigation_modifier', readonly:'true', value:'-1'}
+        %div.skills
+          %input{type:'checkbox', id:'wisdom_save_proficiency'}
+          Saving Throws:
+          %input.modifier{type:'text', id:'wisdom_save_modifier', readonly:'true', value:'+1'}
 
-      %br
-      %input{type:'checkbox', id:'nature_proficiency'}
-      Nature:
-      %input.modifier{type:'text', id:'nature_modifier', readonly:'true', value:'-1'}
+          %br
+          %input{type:'checkbox', id:'animal_handling_proficiency'}
+          Animal handling:
+          %input.modifier{type:'text', id:'animal_handling_modifier', readonly:'true', value:'+1'}
 
-      %br
-      %input{type:'checkbox', id:'religion_proficiency'}
-      Religion:
-      %input.modifier{type:'text', id:'religion_modifier', readonly:'true', value:'-1'}
-    %div.attribute
-      Wisdom:
-      %input#wisdom.ability_score{type:'number', name:'wisdom', min:'1', max:'30', value:'12'}
-      %input.modifier{type:'text', id:'wisdom_modifier', readonly:'true'}
+          %br
+          %input{type:'checkbox', id:'insight_proficiency'}
+          Insight:
+          %input.modifier{type:'text', id:'insight_modifier', readonly:'true', value:'+1'}
 
-      %hr
-      %input{type:'checkbox', id:'wisdom_save_proficiency'}
-      Saving Throws:
-      %input.modifier{type:'text', id:'wisdom_save_modifier', readonly:'true', value:'+1'}
+          %br
+          %input{type:'checkbox', id:'medicine_proficiency', checked:'true'}
+          Medicine:
+          %input.modifier{type:'text', id:'medicine_modifier', readonly:'true', value:'+3'}
 
-      %br
-      %input{type:'checkbox', id:'animal_handling_proficiency'}
-      Animal handling:
-      %input.modifier{type:'text', id:'animal_handling_modifier', readonly:'true', value:'+1'}
+          %br
+          %input{type:'checkbox', id:'perception_proficiency', checked:'true'}
+          Perception:
+          %input.modifier{type:'text', id:'perception_modifier', readonly:'true', value:'+3'}
 
-      %br
-      %input{type:'checkbox', id:'insight_proficiency'}
-      Insight:
-      %input.modifier{type:'text', id:'insight_modifier', readonly:'true', value:'+1'}
+          %br
+          %input{type:'checkbox', id:'survival_proficiency'}
+          Survival:
+          %input.modifier{type:'text', id:'survival_modifier', readonly:'true', value:'+1'}
+      %div.attribute
+        %div.attribute-box
+          %input#charisma-modifier.box-modifier{type:'text', value:'+3'}
+          %hr
+          %input#charisma.ability-score{type:'number', value:'14', min:'8', max:'30'}
+          %br
+          Charisma
 
-      %br
-      %input{type:'checkbox', id:'medicine_proficiency', checked:'true'}
-      Medicine:
-      %input.modifier{type:'text', id:'medicine_modifier', readonly:'true', value:'+3'}
+        %div.skills
+          %input{type:'checkbox', id:'charisma_save_proficiency'}
+          Saving Throws:
+          %input.modifier{type:'text', id:'charisma_save_modifier', readonly:'true', value:'+2'}
 
-      %br
-      %input{type:'checkbox', id:'perception_proficiency', checked:'true'}
-      Perception:
-      %input.modifier{type:'text', id:'perception_modifier', readonly:'true', value:'+3'}
+          %br
+          %input{type:'checkbox', id:'deception_proficiency'}
+          Deception:
+          %input.modifier{type:'text', id:'deception_modifier', readonly:'true', value:'+2'}
 
-      %br
-      %input{type:'checkbox', id:'survival_proficiency'}
-      Survival:
-      %input.modifier{type:'text', id:'survival_modifier', readonly:'true', value:'+1'}
-    %div.attribute
-      Charisma:
-      %input#charisma.ability_score{type:'number', name:'charisma', min:'1', max:'30', value:'14'}
-      %input.modifier{type:'text', id:'charisma_modifier', readonly:'true'}
+          %br
+          %input{type:'checkbox', id:'intimidation_proficiency', checked:'true'}
+          Intimidation:
+          %input.modifier{type:'text', id:'intimidation_modifier', readonly:'true', value:'+4'}
 
-      %hr
-      %input{type:'checkbox', id:'charisma_save_proficiency'}
-      Saving Throws:
-      %input.modifier{type:'text', id:'charisma_save_modifier', readonly:'true', value:'+2'}
+          %br
+          %input{type:'checkbox', id:'performance_proficiency'}
+          Performance:
+          %input.modifier{type:'text', id:'performance_modifier', readonly:'true', value:'+2'}
 
-      %br
-      %input{type:'checkbox', id:'deception_proficiency'}
-      Deception:
-      %input.modifier{type:'text', id:'deception_modifier', readonly:'true', value:'+2'}
-
-      %br
-      %input{type:'checkbox', id:'intimidation_proficiency', checked:'true'}
-      Intimidation:
-      %input.modifier{type:'text', id:'intimidation_modifier', readonly:'true', value:'+4'}
-
-      %br
-      %input{type:'checkbox', id:'performance_proficiency'}
-      Performance:
-      %input.modifier{type:'text', id:'performance_modifier', readonly:'true', value:'+2'}
-
-      %br
-      %input{type:'checkbox', id:'persuasion_proficiency'}
-      Persuasion:
-      %input.modifier{type:'text', id:'persuasion_modifier', readonly:'true', value:'+2'}
+          %br
+          %input{type:'checkbox', id:'persuasion_proficiency'}
+          Persuasion:
+          %input.modifier{type:'text', id:'persuasion_modifier', readonly:'true', value:'+2'}
 
 %div#attack-spell-wrapper
   %fieldset.attacks
     %legend
-      My Attacks
+      Attacks
       .add-button
         %i.fa.fa-plus-circle.fa-2x
       .remove-button
@@ -228,7 +244,7 @@
 
   %fieldset.spells
     %legend
-      My Spells
+      Spells
       .add-button
         %i.fa.fa-plus-circle.fa-2x
       .remove-button
@@ -236,7 +252,7 @@
 
 %fieldset.feats
   %legend
-    My Feats
+    Feats
     .add-button
       %i.fa.fa-plus-circle.fa-2x
     .remove-button

@@ -19,14 +19,12 @@
   %table.char-info
     %tr
       %td.name
-        Tom the Fighter
+        %input{type:'text', value:'Tom the Fighter'}
       %td.level
-        Level:
-      %td
-        %input#level-value{type:'number', value:'2'}
-      %td.proficiency
+        Level
+        %input.level-value{type:'number', value:'2', min:'1', max:'20'}
+      %td.level
         Proficiency bonus:
-      %td
-        %input#level-value{type:'text', value:'+2', readonly:'true'}
+        %input.level-value.proficiency-value{type:'text', value:'+2', readonly:'true'}
 
   %br{style:'clear: both;'}
