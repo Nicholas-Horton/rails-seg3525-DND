@@ -161,7 +161,7 @@
           vertical-align: top;
 
           .spell-block {
-
+            white-space: normal;
             &.delete-warning {
               background-color: rgba(102, 0, 9, 0.38);
             }
