@@ -35,7 +35,7 @@
     top: 4px;
     transition: all 0.2s ease-in-out;
     &:hover {
-      background: darken(#EEEEEE, 10);
+      background-color: #EEEEEE;
     }
   }
   .spells-feats-tab-content {
@@ -49,12 +49,12 @@
     position: absolute;
     top: 53px;
     left: 0;
-    background: darken(#EEEEEE, 15);
+    background-color: #EEEEEE;
   }
   [id^="spells-feats-tab"]:checked + label {
     top: 0;
     padding-top: 17px;
-    background: darken(#EEEEEE, 15);
+    background-color: #EEEEEE;
   }
   [id^="spells-feats-tab"]:checked ~ [id^="spells-feats-tab-content"] {
     display: inline-block;

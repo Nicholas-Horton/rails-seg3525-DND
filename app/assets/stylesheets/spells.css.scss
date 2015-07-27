@@ -3,7 +3,7 @@
   position: absolute;
   z-index: 100;
   width: 300px;
-  background-color: red;
+  background-color: #EC242A;
   border-radius: 8px;
 
   .spell-tooltip-content {
@@ -14,7 +14,7 @@
     .spell-name {
       font-size: 24px;
       text-align: center;
-      border-bottom: 4px solid red;
+      border-bottom: 4px solid #EC242A;
       padding: 4px;
       display: inline-block;
       width: 100%;
@@ -28,26 +28,26 @@
       vertical-align: top;
 
       .title {
-        color: red;
+        color: #EC242A;
         font-weight: bold;
       }
     }
 
     .spell-casting-time, .spell-range {
-      border-bottom: 4px solid red;
+      border-bottom: 4px solid #EC242A;
     }
 
     .spell-casting-time, .spell-components {
-      border-right: 2px solid red;
+      border-right: 2px solid #EC242A;
     }
 
     .spell-range, .spell-duration {
-      border-left: 2px solid red;
+      border-left: 2px solid #EC242A;
     }
 
     .spell-material-components {
       font-size: 12px;
-      background-color: red;
+      background-color: #EC242A;
       padding: 2px 4px;
     }
 

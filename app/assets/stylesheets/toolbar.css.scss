@@ -5,7 +5,7 @@
   right: 0;
   font-size: 28px;
   margin-right: 20px;
-  background-color: #BBBBBB;
+  background-color: #EC242A;
   z-index: 50;
 
   #spells-feats-button, #dice-roller-button {
@@ -15,17 +15,19 @@
     display: inline-block;
     text-decoration: none;
     cursor: pointer;
+    font-weight: bold;
+    color: #FAFAFA;
 
     &:hover {
-      background-color: #999999;
+      background-color: #BD1D22;
     }
 
     &.activated {
-      background-color: #999999;
+      background-color: #BD1D22;
     }
 
     &:active {
-      background: #888888;
+      background: #A5191D;
     }
   }
 }
