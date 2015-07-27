@@ -8,7 +8,7 @@
     = link_to(edit_encounter_encounter_path(@encounter)) do
       %i.fa.fa-pencil
   in campaign
-  %select.campaignName
+  %select.campaign-name
     - current_user.campaigns.each do |c|
       %option{:value => c.id}= c.name
 
