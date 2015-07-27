@@ -90,6 +90,8 @@
        vertical-align:  top;
        display: inline-block;
        height: 100%;
+       border: 4px outset #B3B3B3;
+
        legend {
          font-size: medium;
          font-weight: bold;
@@ -151,10 +153,11 @@
         display: inline-block;
         vertical-align: top;
         height: 100%;
+        border: 4px outset #B3B3B3;
 
         .spell-column {
           display: inline-block;
-          width: 170px;
+          width: 50%;
           vertical-align: top;
 
           .spell-block {
@@ -188,6 +191,8 @@
        vertical-align: top;
        display: inline-block;
        height: 100%;
+       border: 4px outset #B3B3B3;
+
        legend {
          font-size: medium;
          font-weight: bold;
