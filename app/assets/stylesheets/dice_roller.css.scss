@@ -78,20 +78,9 @@
 
     }
 
-    input {
-      border: 1px solid #BBB;
-      transition: box-shadow 0.3s, border 0.3s;
-      outline: none;
-
-      &:focus {
-        border: 1px solid #EEE;
-        box-shadow: 0 0 5px 1px #EEE;
-      }
-
-      &.invalid {
+    input.invalid {
         border: 1px solid #E00;
         box-shadow: 0 0 5px 1px #E00;
-      }
     }
   }
 
