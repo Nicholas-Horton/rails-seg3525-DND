@@ -3,107 +3,97 @@
   z-index: 90;
   background-color: #999999;
   width: 300px;
-  height: 450px;
   display: none;
   bottom: 60px;
   right: 0;
   margin-right: 20px;
-  padding: 10px;
   border-radius: 10px 10px 0 0;
 
-  table {
-    text-align: left;
-    td:nth-child(1),
-    th:nth-child(1) {
-      width: 60px;
-      padding-right: 20px;
-      input {
+  #dice-roller-content {
+    margin: 10px;
+    padding: 10px;
+    background-color: #BBB;
+
+    table {
+      text-align: left;
+      td:nth-child(1),
+      th:nth-child(1) {
         width: 60px;
+        padding-right: 20px;
+        input {
+          width: 60px;
+        }
+      }
+      td:nth-child(2),
+      th:nth-child(2) {
+        width: 30px;
+        padding-right: 20px;
+        text-align: center;
+      }
+      td:nth-child(3),
+      th:nth-child(3) {
+        width: 120px;
+        input {
+          width: 120px;
+        }
+      }
+
+    }
+
+    .button {
+      margin-top: 10px;
+    }
+
+    #error-message {
+      color: red;
+      padding: 5px;
+    }
+
+    #dice-roller-output {
+      width: 260px;
+      height: 160px;
+      overflow-y: scroll;
+      margin: 10px 0;
+      background-color: #EEE;
+
+      .dice-roller-separator {
+        border-top: 2px solid #666;
+        margin: 0 10px;
+      }
+
+      .dice-roller-formula {
+        color: #444;
+        margin: 10px;
+
+        &:last-child {
+          color: #111;
+          font-weight: bold;
+          text-shadow: 1px 1px 1px #AAA;
+        }
       }
     }
-    td:nth-child(2),
-    th:nth-child(2) {
-      width: 30px;
-      padding-right: 20px;
+
+    #dice-roller-input {
+      width: 260px;
+      font-size: 24px;
+
     }
-    td:nth-child(3),
-    th:nth-child(3) {
-      width: 150px;
-      input {
-        width: 150px;
+
+    input {
+      border: 1px solid #BBB;
+      transition: box-shadow 0.3s, border 0.3s;
+      outline: none;
+
+      &:focus {
+        border: 1px solid #EEE;
+        box-shadow: 0 0 5px 1px #EEE;
       }
-    }
 
-  }
-
-  a {
-    display: inline-block;
-    padding: 10px 20px;
-    margin: 10px 0;
-    background: #bbb;
-    border: 1px solid #777;
-    border-radius: 4px;
-    text-decoration: none;
-
-    &:hover {
-      background: #aaa;
-    }
-
-    &:active {
-      background: #a6a6a6;
-    }
-  }
-
-  #error-message {
-    color: red;
-    padding: 5px;
-  }
-
-  #dice-roller-output {
-    width: 294px;
-    height: 160px;
-    overflow-y: scroll;
-    margin: 10px 0;
-    background-color: #EEE;
-
-    .dice-roller-separator {
-      border-top: 2px solid #666;
-      margin: 0 10px;
-    }
-
-    .dice-roller-formula {
-      color: #444;
-      margin: 10px;
-
-      &:last-child {
-        color: #111;
-        font-weight: bold;
-        text-shadow: 1px 1px 1px #AAA;
+      &.invalid {
+        border: 1px solid #E00;
+        box-shadow: 0 0 5px 1px #E00;
       }
     }
   }
-
-  #dice-roller-input {
-    width: 294px;
-    font-size: 24px;
-
-  }
-
-  input {
-    border: 1px solid #BBB;
-    transition: box-shadow 0.3s, border 0.3s;
-    outline: none;
-
-    &:focus {
-      border: 1px solid #EEE;
-      box-shadow: 0 0 5px 1px #EEE;
-    }
-
-    &.invalid {
-      border: 1px solid #E00;
-      box-shadow: 0 0 5px 1px #E00;
-    }
-  }
-
 
 }

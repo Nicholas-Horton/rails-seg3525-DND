@@ -38,7 +38,7 @@ class EncountersController < ApplicationController
     @encounter = Encounter.new(encounter_params)
 
     if @encounter.save
-      redirect_to edit_encounter_encounter_path(@encounter), notice: 'Encounter was successfully created.'
+      redirect_to show_encounter_encounter_path(@encounter), notice: 'Encounter was successfully created.'
     else
       render :new
     end
@@ -46,7 +46,7 @@ class EncountersController < ApplicationController
 
   def update
     if @encounter.update(encounter_params)
-      redirect_to @encounter, notice: 'Encounter was successfully updated.'
+      redirect_to show_encounter_encounter_path(@encounter), notice: 'Encounter was successfully updated.'
     else
       render :edit
     end

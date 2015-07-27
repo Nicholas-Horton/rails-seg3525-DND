@@ -5,7 +5,7 @@
   }
 }
 
-.add-monster-button{
+#add-monster-button{
   position: absolute;
   top: 0;
   right: 0;
@@ -21,7 +21,7 @@
   cursor: pointer;
 }
 
-.add-monster-button:hover{
+#add-monster-button:hover{
   color: darkgreen;
 
   border-left: 1px solid #AAAAAA;
@@ -97,7 +97,7 @@
 
        .add-button{
          color: green;
-         padding: 10px;
+         padding: 2px;
        }
 
        table {
@@ -147,59 +147,43 @@
          }
        }
      }
-     .spells {
-       vertical-align:  top;
-       .add-button{
-         color: green;
-         padding: 10px;
-       }
+      .spells {
+        display: inline-block;
+        vertical-align: top;
+        height: 100%;
 
-       display: inline-block;
-       height: 100%;
-       legend {
-         font-size: medium;
-         font-weight: bold;
-       }
+        .spell-column {
+          display: inline-block;
+          width: 170px;
+          vertical-align: top;
 
-       table {
-         border-collapse: collapse;
-         th {
-           font-size: smaller;
-           color: #666666;
-         }
-         td, th {
-           padding: 0 10px 0 10px;
-         }
-         td {
-           text-align: center;
-           font-size: smaller;
-           background-color: #DDD;
-         }
+          .spell-block {
 
-         .delete {
-           color: darkred;
-         }
-         .delete:hover {
-           background-color: rgba(102, 0, 9, 0.38);
-         }
+            &.delete-warning {
+              background-color: rgba(102, 0, 9, 0.38);
+            }
 
-         tr:hover td {
-           background-color: #999999;
-         }
+            .spell {
+              display: inline-block;
+              vertical-align: top;
+              padding-left: 8px;
+              cursor: pointer;
+              width: 50%;
+              font-size: smaller;
 
-         .spell-row:hover:after {
-           background: #333;
-           background: rgba(0, 0, 0, .8);
-           border-radius: 5px;
-           color: #fff;
-           content: attr(description);
-           padding: 5px 15px;
-           position: absolute;
-           z-index: 999;
-           width: 500px;
-         }
-       }
+              &:hover {
+                background-color: #999;
+              }
+            }
+
+            .delete {
+              display: inline-block;
+              margin: 0;
+            }
+          }
+        }
      }
+
      .other{
        vertical-align: top;
        display: inline-block;

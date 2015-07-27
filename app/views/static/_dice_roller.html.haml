@@ -1,21 +1,22 @@
 #dice-roller
-  %table
-    %tr
-      %th Amount
-      %th Die
-      %th Modifier
-    - for d in [4,6,8,10,12,20]
+  #dice-roller-content
+    %table
       %tr
-        %td
-          = number_field_tag "d#{d}-amount", nil, min: 0, max: 99, class: 'amount'
-        %td
-          = "d#{d}"
-        %td
-          = text_field_tag "d#{d}-modifier"
+        %th Amount
+        %th Die
+        %th Modifier
+      - for d in [4,6,8,10,12,20]
+        %tr
+          %td
+            = number_field_tag "d#{d}-amount", nil, min: 0, max: 99, class: 'amount'
+          %td
+            = "d#{d}"
+          %td
+            = text_field_tag "d#{d}-modifier"
 
-  %a#roll-dice{href: '#'} Roll
-  %a#clear-dice{href: '#'} Clear
-  %label#error-message
+    #roll-dice.button Roll
+    #clear-dice.button Clear
+    %label#error-message
 
-  #dice-roller-output
-  = text_field_tag 'dice-roller-input'
+    #dice-roller-output
+    = text_field_tag 'dice-roller-input'
