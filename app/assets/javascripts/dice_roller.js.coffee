@@ -19,16 +19,16 @@ rollDice = () ->
   for d in [4, 6, 8, 10, 12, 20]
     amount = $('#d'+d+'-amount').val()
     if amount > 0
-      modifier = $('#d'+d+'-modifier').val()
+      modifier = $('#d'+d+'-dice-modifier').val()
       if validModifier(modifier)
         if formula != ''
           formula += '+'
         formula += amount + 'd' + d
         formula += modifier
-        $('#d'+d+'-modifier').removeClass('invalid')
+        $('#d'+d+'-dice-modifier').removeClass('invalid')
       else
         $('#error-message').html('Invalid input')
-        $('#d'+d+'-modifier').addClass('invalid')
+        $('#d'+d+'-dice-modifier').addClass('invalid')
         return
   submitDiceRoll(formula)
 
