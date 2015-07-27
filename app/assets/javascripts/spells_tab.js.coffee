@@ -50,3 +50,6 @@ filter = () ->
   tableRows = $("#spells-feats-tabs #spells-tab #spell-table .spell-row")
   tableRows.hide()
   matchingRows.show()
+
+  $("#spells-feats-tabs #spells-tab #spell-table .spell-row:visible:even").css('background-color', '#DDDDDD')
+  $("#spells-feats-tabs #spells-tab #spell-table .spell-row:visible:odd").css('background-color', '#EEEEEE')
