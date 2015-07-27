@@ -7,14 +7,15 @@
       %ul
         - @encounter.errors.full_messages.each do |msg|
           %li= msg
-  .field
-    = f.label :campaign_id
-    = f.select(:campaign_id) do
-      - current_user.campaigns.each do |c|
-        %option{:value => c.id}= c.name
-  .field
-    = f.label :name
-    = f.text_field :name
+  .edit-fieldset
+    .field
+      = f.label :campaign_id
+      = f.select(:campaign_id) do
+        - current_user.campaigns.each do |c|
+          %option{:value => c.id}= c.name
+    .field
+      = f.label :name
+      = f.text_field :name
   .actions
     = f.submit 'Save', {:class=>"button"}
 

@@ -11,66 +11,194 @@
     color: #444444;
   }
   #battleinfo {
-    width: 20%;
+    width: 230px;
     float: left;
-    height: 422px;
+    height: 470px;
     @media only screen and (max-width: 1200px) {
       height: 472px;
     }
     .battlestats-wrapper {
       width: 100%;
       display: table;
-      height: 15%;
       .battlestats-cell {
-        display: table-cell;
-        width: 33%;
-        input {
-          width: 60px;
-          float: left;
-        }
-      }
-    }
-    .battlestats-section2-wrapper {
-      display: table;
-      height: 45%;
-      border: 1px solid #111111;
-      padding: 5px;
-      .battlestats-section2-top-cell {
-        margin-bottom: 5%;
-          input {
-            width: 50px;
-            float: right;
-          }
-        }
-      .battlestats-section2-bottom-cell{
-        input {
-          width: 95%;
-          font-size: larger;
-
-        }
-
-      }
-    }
-    .battlestats-section3-wrapper {
-      display: table;
-      height: 33%;
-      margin-top: 5px;
-      .battlestats3-cell {
-       display: table-cell;
-        width: 45%;
-        border: 1px solid #111111;
+        margin: 1px;
+        display:inline-block;
+        background-color: #FAFAFA;
+        border: 2px outset #444444;
+        border-radius: 5px;
         padding: 3px;
+        text-align: center;
+        width: 64px;
+        color: #444444;
         input {
-          width: 30px;
-          float: left;
+          border: none;
+          background: none;
+          width: 38px;
+          font-size: 18px;
+          text-align: right;
+          margin-left: 16px;
         }
+        #initiative{
+          margin-left: 6px;
+        }
+      }
+    }
+    .health-info-wrapper {
+      height: 130px;
+      background-color: #FAFAFA;
+      border: 2px outset #444444;
+      border-radius: 5px;
+      padding: 5px;
+      margin-top: 5px;
+      hr {
+        margin: 0 0 5px 0;
+      }
+      #maxHP-label{
+        color: #444444;
+        font-size: 15px;
+      }
+      #maxHP{
+        margin-left: 10px;
+        width: 40px;
+        border: none;
+        background: none;
+        font-size: 15px;
+        color: #666666;
+      }
+      .current-HP{
+        padding: 10px;
+        float:left;
+        text-align: center;
+        font-size: 15px;
+        input{
+          margin-left: 5px;
+          height: 50px;
+          width: 60px;
+          text-align: right;
+          border: none;
+          background: none;
+          font-size: 25px;
+          font-weight: bold;
+        }
+      }
+      .temp-HP{
+        padding: 10px;
+        text-align: center;
+        float: right;
+        font-size: 15px;
+        color: #666666;
+        input{
+          color: #666666;
+          height: 50px;
+          width: 60px;
+          text-align: right;
+          border: none;
+          background: none;
+          font-size: 25px;
+          font-weight: bold;
+        }
+      }
+
+    }
+    .hit-dice {
+        height: 108px;
+        margin-top: 5px;
+        background-color: #FAFAFA;
+        border: 2px outset #444444;
+        border-radius: 5px;
+        padding: 5px;
+        float: left;
+        font-size: 15px;
+        #total-label{
+          color: #444444;
+          font-size: 15px;
+        }
+        #total-hit-dice{
+          margin-left: 10px;
+          width: 40px;
+          border: none;
+          background: none;
+          font-size: 15px;
+          color: #666666;
+        }
+        #hit-dice{
+          margin-left: 11px;
+          height: 35px;
+          width: 60px;
+          text-align: right;
+          border: none;
+          background: none;
+          font-size: 25px;
+          font-weight: bold;
+        }
+        #hit-dice-label{
+          margin-left: 15px;
+        }
+      }
+    .saves{
+      width: 114px;
+      height: 103px;
+      margin-top: 5px;
+      background-color: #FAFAFA;
+      border: 2px outset #444444;
+      border-radius: 5px;
+      padding: 10px 5px 5px 5px;
+      float: right;
+      font-size: 13px;
+      input{
+        margin: 7px 0 0 0;
+        float: right;
+      }
+      #death-saves-label{
+        font-size: 15px;
+        margin-left: 15px;
+        margin-top: 5px;
+      }
+    }
+    .passive-perception{
+      line-height: 50px;
+      height: 49px;
+      margin-top: 132px;
+      text-align: center;
+      background-color: #FAFAFA;
+      border: 2px outset #444444;
+      border-radius: 5px;
+      font-size: 15px;
+      input {
+        margin-top: 2px;
+        padding-left: 10px;
+        width: 40px;
+        font-size: 20px;
+        font-weight: bold;
+        background: none;
+        border: none;
+      }
+    }
+    .experience{
+      margin-top: 5px;
+      line-height: 50px;
+      height: 49px;
+      text-align: center;
+      background-color: #FAFAFA;
+      border: 2px outset #444444;
+      border-radius: 5px;
+      font-size: 15px;
+      input {
+        margin-top: 2px;
+        padding-left: 10px;
+        width: 78px;
+        font-size: 20px;
+        font-weight: bold;
+        background: none;
+        border: none;
       }
     }
   }
+
   #attributes {
     margin-left: 5%;
     font-size: smaller;
-    height: 425px;
+    height: 473px;
     @media only screen and (max-width: 1200px) {
       height: 475px;
     }
@@ -79,13 +207,16 @@
       display: table;
       table-layout: fixed;
       width: 100%;
-      height: 40%;
+      height: 48%;
 
+      @media only screen and (max-width: 1200px) {
+        height: 40%;
+      }
       .attribute {
         display: table-cell;
         vertical-align: top;
         height: 200px;
-        border: 1px solid #111111;
+        border: 2px outset #FAFAFA;
 
         .attribute-box{
           float: left;
@@ -133,6 +264,7 @@
         }
 
         .modifier {
+          font-weight: bold;
           width: 25px;
           border: 2px solid #99CCFF;
           border-radius: 5px;

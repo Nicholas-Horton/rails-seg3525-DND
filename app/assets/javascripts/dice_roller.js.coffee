@@ -38,7 +38,7 @@ validModifier = (modifier) ->
 
 clearDice = () ->
   $("[id$='-amount']").val('')
-  $("[id$='-modifier']").val('')
+  $("[id$='-dice-modifier']").val('')
 
 rollInputChanged = (e) ->
   if e.keyCode == 13
